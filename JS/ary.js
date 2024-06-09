@@ -52,3 +52,10 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 
 // Array.isArray() //
 // console.log(Array.isArray(ary1));
+
+// Map() //
+//Example (1)
+// let res = ary1.map((x)=>{
+//     return x*10;
+// })
+// console.log(res);
