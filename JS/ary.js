@@ -39,7 +39,7 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 
 // join() //
 // console.log(ary1.join()); // return a string 
-// console.log(ary2.join()); // return a string 
+// console.log(ary2.join(" ")); // return a string 
 
 // slice() //
 // console.log(ary1.slice(1,3));
@@ -53,9 +53,53 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // Array.isArray() //
 // console.log(Array.isArray(ary1));
 
-// Map() //
+// map() //
 //Example (1)
 // let res = ary1.map((x)=>{
 //     return x*10;
+// })
+// console.log(res);
+//Example (2)
+// let player = ary2.map((p)=>{
+//     return `${p} is great player`
+// })
+// console.log(player);
+
+// indexOf() //
+// console.log(ary2.indexOf("Rohit"));
+
+// lastIndexOf() //
+// console.log([2,7,5,2,9,4,2,1].lastIndexOf(2));
+
+// Include() //
+// console.log(ary2.includes("Dhoni"));
+
+// find() //
+// let res = ary1.find((num)=>{
+//     return num>20;
+// })
+// console.log(res);
+
+// findIndex() //
+// let res = ary1.findIndex((num)=>{
+//     return num>20;
+// })
+// console.log(res);
+
+// some() //
+// let res = ary1.some((num)=>{
+//     return num>40;
+// })
+// console.log(res);
+
+// filer() //
+// let res = ary1.filter((num)=>{
+//     return num>30;
+// })
+// console.log(res);
+
+// every() //
+// let res = ary1.every((num)=>{
+//     return num>7;
 // })
 // console.log(res);
