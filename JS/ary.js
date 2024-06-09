@@ -37,3 +37,18 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // console.log(ary2.unshift()); // total elements 6
 // console.log(ary2.unshift("Dhoni"));  // total elements 6+1 = 7
 
+// join() //
+// console.log(ary1.join()); // return a string 
+// console.log(ary2.join()); // return a string 
+
+// slice() //
+// console.log(ary1.slice(1,3));
+// console.log(ary2.slice(1,4));
+
+// splice() //
+// ary2.splice(1,0,"Dhoni","Shami");
+// console.log(ary2);
+// console.log(ary2.splice(1,0,"Dhoni","Shami")); // return empty array
+
+// Array.isArray() //
+// console.log(Array.isArray(ary1));
