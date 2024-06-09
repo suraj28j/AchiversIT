@@ -103,3 +103,18 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 //     return num>7;
 // })
 // console.log(res);
+
+// forEach() //
+// let res = ary2.forEach((v,i)=>{
+//     console.log(`${i} ${v}`);
+// })
+
+// toString() //
+// let res = ary2.toString()
+// console.log(res);
+
+// values() //
+// let res = ary1.values();
+// for(let element of res){
+//     console.log(element);
+// }
