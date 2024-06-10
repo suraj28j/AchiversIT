@@ -118,3 +118,16 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // for(let element of res){
 //     console.log(element);
 // }
+
+// fill() //
+// console.log(ary2.fill("Suraj"));
+
+// reduce() //
+// let res = ary1.reduce((acc,cuur)=> acc+cuur,0);
+// console.log(res);
+
+// flat() //
+// let ary3 = [1,2,3,[4,5]];
+// let ary4 = [1,2,3,[4,5,[6,7,8],9,10],11,12,13,[14,15]];
+// console.log(ary4.flat());
+// console.log(ary4.flat(2));
