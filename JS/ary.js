@@ -131,3 +131,19 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // let ary4 = [1,2,3,[4,5,[6,7,8],9,10],11,12,13,[14,15]];
 // console.log(ary4.flat());
 // console.log(ary4.flat(2));
+
+// flatMap() //
+// console.log(ary1.flatMap((x)=>[x*2]));
+
+// for of loop //
+// for(let element of ary1){
+//     console.log(element);
+// }
+
+// entries() //
+// let list = ary2.entries();
+// for(let x of list){
+//     console.log(x);
+// }
+
+
