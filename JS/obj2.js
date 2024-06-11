@@ -40,6 +40,7 @@ In JavaScript, for example, you can serialize an object to a JSON string by call
 // let obj2 = JSON.parse(jsonData);
 // console.log(obj2.name);
 
+
 // Object.keys() //
 // console.log(Object.keys(employee)); // return array
 
@@ -83,3 +84,22 @@ let mobile =  Object.assign({},mobile_info,mobile_price);
 // getOwnPropertyNames() //
 // console.log(Object.getOwnPropertyNames(employee)); // return array
 
+// setPrototypeOF() // 
+
+let obj1 = {
+    name:"Suraj",
+    mark:70,
+    msg:function(){
+        console.log(`welcome ${this.name}`);
+    }
+}
+
+let obj2 = {
+    name:"Sai",
+    age:30,
+    // __proto__:obj1  // 1st mathod
+}
+// obj2.__proto__ = obj1; // 2nd mathod
+// Object.setPrototypeOf(obj2,obj1); // 3rd mathod
+
+obj2.msg();
