@@ -101,5 +101,53 @@ let obj2 = {
 }
 obj2.__proto__ = obj1; // 2nd mathod
 // Object.setPrototypeOf(obj2,obj1); // 3rd mathod
-obj2.msg();
-console.log(obj2.mark);
+// obj2.msg();
+// console.log(obj2.mark);
+
+
+
+
+// >>> Object.getOwnPropertyDescriptor()<<< //
+
+let PI = Object.getOwnPropertyDescriptor(Math,'PI');
+// console.log(PI);
+/*
+{
+  value: 3.141592653589793,
+  writable: false,
+  enumerable: false,
+  configurable: false
+}
+*/
+
+let laptop = {
+    model:"ASUS Vivobook",
+    price:40000,
+    isAvailable:true
+}
+let myLaptop = Object.getOwnPropertyDescriptor(laptop,"model");
+// console.log(myLaptop);
+/*
+{
+  value: 'ASUS Vivobook',
+  writable: true,
+  enumerable: true,
+  configurable: true
+}
+*/
+
+
+Object.defineProperty(laptop, "model", {
+    writable: false,
+    enumerable: false,
+})
+let myLap = Object.getOwnPropertyDescriptor(laptop,"model");
+// console.log(myLap);
+/*
+{
+  value: 'ASUS Vivobook',
+  writable: false,
+  enumerable: false,
+  configurable: true
+}
+*/
