@@ -81,7 +81,7 @@ let me = Object.create(person);
 
 
 // (6) Using Object.fromEnties()
-
+/* The Object.fromEntries() static method transforms a list of key-value pairs into an object. */
 
 const entries = new Map([
     ['name', 'Suraj'],
