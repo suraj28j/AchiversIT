@@ -99,7 +99,7 @@ let obj2 = {
     age:30,
     // __proto__:obj1  // 1st mathod
 }
-// obj2.__proto__ = obj1; // 2nd mathod
+obj2.__proto__ = obj1; // 2nd mathod
 // Object.setPrototypeOf(obj2,obj1); // 3rd mathod
-
 obj2.msg();
+console.log(obj2.mark);
