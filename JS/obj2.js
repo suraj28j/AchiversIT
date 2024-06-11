@@ -151,3 +151,55 @@ let myLap = Object.getOwnPropertyDescriptor(laptop,"model");
   configurable: true
 }
 */
+
+
+
+// Object Comparison //
+
+let myObj1 = {
+    name:"Suraj",
+    age:33
+}
+let myObj2 = {
+    name:"Suraj",
+    age:33
+}
+// console.log(myObj1===myObj2); // false
+
+
+
+
+
+// Object Destructuring //
+
+let student = {
+    name:"Suraj",
+    age:32,
+    mark:70,
+    isLogin:true
+}
+// console.log(student.name);
+
+let {name} = student;
+// console.log(name); 
+let {age:AGE} = student;
+// console.log(AGE);
+// let {name:myNAME,age:myAGE,mark:myMARK} = student
+
+
+
+// Spread Oprator //
+
+let info = {
+    model:"Galaxy M14",
+    launch:"2023"
+}
+
+let price = {
+    ram_6gb:13000,
+    ram_8gb:16000
+}
+
+let myMobile = {...info,...price}
+// console.log(myMobile);
+
