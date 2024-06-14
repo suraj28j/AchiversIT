@@ -44,8 +44,9 @@ myFun3();
 // myFun4()
 
 
-// Closure //
-/* a function which has access to the variable from its encloseing scope even after the encloseing scope 
+// closure / lexical scope / currying /  //
+
+/* Closure - a function which has access to the variable from its encloseing scope even after the encloseing scope 
 or the outer function has finished execution */
 
 function outerFunction(){
