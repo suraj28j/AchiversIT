@@ -10,7 +10,7 @@ var x = 10;
 function myFun() {
     console.log(x);
 }
-myFun();
+// myFun();
 
 // Local variables :
 // Local variables declaread inside the function or block are called local variables
@@ -19,7 +19,7 @@ function myFun2() {
     var y = 10;
     console.log(y);
 }
-myFun2();
+// myFun2();
 
 
 // Function Variable
@@ -32,7 +32,7 @@ function myFun3() {
         console.log(x3);
     }
 }
-myFun3();
+// myFun3();
 
 //scope pollution
 
@@ -57,4 +57,25 @@ function outerFunction(){
     }
     return innerFunction();
 }
-outerFunction();
+// outerFunction();
+
+
+// closure in loop //
+// closure can be tricky in loop due to the way of JavaScript handles variable scope.
+
+for(var i=0;i<=5;i++){
+    setTimeout(()=>{
+        console.log(i);
+    })
+}
+// output is 6 six time
+
+
+for(let i=0;i<=5;i++){
+    setTimeout(()=>{
+        console.log(i);
+    })
+}
+// output is 1 2 3 4 5 6
+
+// Is it because let binds to the inner scope each item differently and var keeps the latest value of i //
