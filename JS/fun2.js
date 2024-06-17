@@ -24,10 +24,13 @@ let result3 = squre(5);
 // console.log(result3);
 
 
-// this 
+// [this keyword] 
+// Note :- this keyword is not working with arrow function //
 
-//console.log(this); // return empty object
+//console.log(this); // return empty object in Node JS
+
 // with browser it's return window object
+
 
 let myObj = {
     name:"Suraj",
@@ -58,6 +61,7 @@ let user2 = {
 //user.heyHello(); // Hello MR undefined your mark is undefined
 
 
+// [arrow function with Array mathods]
 
 let num = [2,4,7,8,3,10]
 let output = num.reduce((item) => { 
