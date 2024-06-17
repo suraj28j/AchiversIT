@@ -43,3 +43,8 @@ student.prototype.isLogin = function(){
     console.log(`${this.name} is login`);
 }
 // rollNo1.isLogin();
+
+
+
+// [instanceof] //
+console.log(rollNo1 instanceof student); // true
