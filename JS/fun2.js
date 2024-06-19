@@ -1,3 +1,5 @@
+// [arrow function]
+
 let fun = () => {
     console.log("hello");
 }
