@@ -21,6 +21,17 @@
         width: 300px;
         height: 80px;
     }
+    .training h4{
+        font-size: 80%;
+    }
+    .tranding{
+        height:900px ;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .tranding section{
+        width: 300px;
+        height: 280px;
+    }
 }
 
 @media screen and (max-width:768px) { 
@@ -48,6 +59,13 @@
     .training section h4{
         font-size: 70%;
     }
+    .tranding{
+        height: 730px;
+    }
+    .tranding section{
+        width: 230px;
+        height: 230px;
+    }
 }
 
 
@@ -74,6 +92,21 @@
     .training section h4:nth-child(1),.training section h4:nth-child(2){
         left: 5%;
     }
+    .tranding{
+        display: flex;
+        flex-direction: column;
+        height:auto;
+        margin-top: -20%;
+    }
+    .tranding section{
+        width: 350px;
+        height: 300px;
+        margin-top: 3%;
+    }
+    h2{
+        font-size: 200%;
+        margin: 30% 10%;
+    }
 }
 
 @media screen and (max-width:376px) { 
@@ -90,7 +123,13 @@
     .training section h4:nth-child(3) {
         left: 80%;
     }
-    
+    .tranding section{
+        width: 320px;
+        height: 300px;
+    }
+    h2{
+        font-size: 180%;
+    }
 }
 
 @media screen and (max-width:321px) { 
@@ -103,6 +142,14 @@
     }
     .training section h4:nth-child(3) {
         left: 70%;
+    }
+    .tranding section{
+        width: 280px;
+        height: 300px;
+    }
+    h2{
+        font-size: 160%;
+        margin-top: 35%;
     }
     
 }
