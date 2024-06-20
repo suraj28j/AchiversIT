@@ -14,6 +14,9 @@
         width: 800px;
         margin-left: 10%;
     }
+    .training{
+        margin-top: -5%;
+    }
     .training section{
         width: 300px;
         height: 80px;
@@ -32,8 +35,7 @@
     header li a{
         display: none;
     }
-    header li i{
-        color: var(--font-color1);
+    header li:last-child i{
         display: block;
     }
     .training{
@@ -49,14 +51,58 @@
 }
 
 
-@media screen and (max-width:425px) { 
+@media screen and (max-width:426px) { 
+    header section {
+        width: 600px;
+        height: 60px;
+        margin-left: 3%;
+    }
+    header li:last-child i{
+        display: block;
+    }
+    .training{
+        display: flex;
+        flex-direction: column;
+    }
+    .training section{
+        width: 400px;
+        height: 60px;
+    }
+    .training section h4:nth-child(3) {
+        left: 80%;
+    }
+    .training section h4:nth-child(1),.training section h4:nth-child(2){
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:376px) { 
+    header li:last-child i{
+        display: block;
+    }
+    .training section{
+        width: 350px;
+        height: 60px;
+    }
+    .training section h4:nth-child(1),.training section h4:nth-child(2){
+        left: 5%;
+    }
+    .training section h4:nth-child(3) {
+        left: 80%;
+    }
     
 }
 
-@media screen and (max-width:375px) { 
-    
-}
-
-@media screen and (max-width:320px) { 
+@media screen and (max-width:321px) { 
+    header li:last-child i{
+        display: block;
+    }
+    .training section{
+        width: 300px;
+        height: 60px;
+    }
+    .training section h4:nth-child(3) {
+        left: 70%;
+    }
     
 }
