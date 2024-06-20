@@ -1,0 +1,62 @@
+@media screen and (max-width:1024px) { 
+    header {
+        height: 80px;
+    }
+    header section {
+        width: 180px;
+        height: 50px;
+        margin-left: 3%;
+    }
+    header a {
+        font-size: 100%;
+    }
+    header ul {
+        width: 800px;
+        margin-left: 10%;
+    }
+    .training section{
+        width: 300px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width:768px) { 
+    header {
+        height: 80px;
+    }
+    header section {
+        width: 180px;
+        height: 50px;
+        margin-left: 3%;
+    }
+    header li a{
+        display: none;
+    }
+    header li i{
+        color: var(--font-color1);
+        display: block;
+    }
+    .training{
+        margin-top: -6%;
+    }
+    .training section{
+        width: 220px;
+        height: 60px;
+    }
+    .training section h4{
+        font-size: 70%;
+    }
+}
+
+
+@media screen and (max-width:425px) { 
+    
+}
+
+@media screen and (max-width:375px) { 
+    
+}
+
+@media screen and (max-width:320px) { 
+    
+}

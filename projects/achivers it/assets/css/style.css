@@ -27,6 +27,7 @@
 header {
     display: flex;
     grid-template-columns: 20% 80%;
+    align-items: center;
     height: 65px;
     background-color: var(--bg-color3);
 }
@@ -48,6 +49,10 @@ header ul {
 header li {
     line-height: 60px;
 }
+header li i{
+    color: var(--font-color1);
+    display: none;
+}
 header a {
     font-size: 115%;
     color: var(--font-color1);
@@ -58,7 +63,6 @@ header a:hover {
 /* banner */
 .banner {
     height: 400px;
-    /* border: 1px solid; */
 }
 .banner img {
     width: 100%;
@@ -68,9 +72,9 @@ header a:hover {
 .training {
     height: 100px;
     display: flex;
-    margin-top: -3%;
+    margin-top: -5%;
     justify-content: space-evenly;
-    
+    align-items: center;
 }
 .training section {
     width: 400px;
