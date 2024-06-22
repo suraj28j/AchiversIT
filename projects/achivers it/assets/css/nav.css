@@ -1,0 +1,59 @@
+nav{
+    margin-left: 30%;
+}
+nav>ul {
+    display: grid;
+    grid-template-columns:150px repeat(6,auto);
+    height: 50px;
+}
+nav>ul>li{
+    height: 50px;
+    line-height: 50px;
+}
+nav ul li:last-child i{
+    color: var(--font-color1); 
+    display: none;
+}
+nav ul ul {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+}
+nav ul ul li{
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 1px; 
+    box-shadow: 1px 1px 2px gray;
+}
+nav>ul ul a{
+    margin-left: 10%;
+}
+nav>ul>li>a {
+    font-size: 105%;
+    color: var(--font-color1);
+    text-align: center;
+}
+nav>ul ul a {
+    color: var(--font-color2);
+    display: block
+}
+nav>ul>li>a:hover {
+    color: var(--font-color3);
+}
+nav>ul ul,
+nav>ul ul ul{
+    display: none;
+}
+nav>ul li:hover>ul,
+nav>ul ul li:hover>ul{
+    display: block;
+}
+
+nav ul ul ul{
+    margin-left: 101%;
+    margin-top: -20%;
+}
+nav ul ul ul li{
+    width: 300px;
+}
