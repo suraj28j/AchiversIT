@@ -1,18 +1,16 @@
 @media screen and (max-width:1024px) { 
     header {
-        height: 80px;
+        height: 100px;
     }
     header section {
-        width: 180px;
-        height: 50px;
-        margin-left: 3%;
+        width: 250px;
     }
-    header a {
-        font-size: 100%;
+    nav{
+        margin-left: 14%;
+        width: 700px;
     }
-    header ul {
-        width: 800px;
-        margin-left: 10%;
+    nav>ul {
+        width: 650px;
     }
     .training{
         margin-top: -5%;
@@ -37,17 +35,53 @@
 @media screen and (max-width:768px) { 
     header {
         height: 80px;
+        grid-template-columns: 70% 30%;
     }
     header section {
         width: 180px;
         height: 50px;
         margin-left: 3%;
     }
-    header li a{
+    nav{
+        width: 60px;
+        border: 1px solid rgb(71, 69, 69);
+        margin-left: 50%;
+    }
+    nav>a{
+        display: block;
+        width: 60px;
+        text-align: center;
+    }
+    nav>a i{
+        font-size: 150%;
+    }
+    nav>ul{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: var(--bg-color3);
+        position: absolute;
+        left: 0px;
+        top: 80px;
         display: none;
     }
-    header li:last-child i{
-        display: block;
+    nav>ul>li{
+        height: 35px;
+        width: 180px;
+        line-height: 35px;
+    }
+    nav>ul>li>a{
+        color: var(--font-color1);
+        margin-left: 15%;
+    }
+    #vertical_fixed p{  
+        top: 14%;
+        font-size: 60%;
+        width: 20px;
+        height: 70px;
+        text-align: center;
+        line-height: 20px;
     }
     .training{
         margin-top: -6%;
@@ -68,15 +102,29 @@
     }
 }
 
-
 @media screen and (max-width:426px) { 
-    header section {
-        width: 600px;
-        height: 60px;
-        margin-left: 3%;
+    header{
+        height: 100px;
+        grid-template-columns: 50% 50%;
     }
-    header li:last-child i{
-        display: block;
+    header section {
+        width: 200px;
+        height: 60px;
+    }
+    nav>ul ul{
+        margin-left: 3%;
+        margin-right: 2%;
+        border:2px solid;
+    }
+    nav>ul ul>li{
+        width: 400px;
+    }
+    nav>ul ul ul{
+        margin: 0% 5%;
+        border-radius: 2%;
+    }
+    #vertical_fixed{
+        display: none;
     }
     .training{
         display: flex;
@@ -113,6 +161,9 @@
     header li:last-child i{
         display: block;
     }
+    nav>ul ul>li{
+        width: 350px;
+    }
     .training section{
         width: 350px;
         height: 60px;
@@ -135,6 +186,13 @@
 @media screen and (max-width:321px) { 
     header li:last-child i{
         display: block;
+    }
+    nav>ul ul>li{
+        width: 300px;
+    }
+    nav>ul ul ul{
+        width: 280px;
+        margin: 0% 2%;
     }
     .training section{
         width: 300px;

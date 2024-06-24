@@ -1,28 +1,33 @@
 nav{
     margin-left: 30%;
+    display: grid;
+    grid-template-columns: 95% 5%;
 }
 nav>ul {
     display: grid;
-    grid-template-columns:150px repeat(6,auto);
+    grid-template-columns: repeat(6,auto);
     height: 50px;
 }
 nav>ul>li{
     height: 50px;
     line-height: 50px;
+    margin: 1px;
 }
-nav ul li:last-child i{
+nav>a{
     color: var(--font-color1); 
     display: none;
+    line-height: 50px;
 }
+
 nav ul ul {
     position: absolute;
     z-index: 1;
-    background-color: white;
+    background-color:var(--font-color1);
 }
 nav ul ul li{
     width: 250px;
-    height: 50px;
-    line-height: 50px;
+    height: 45px;
+    line-height: 45px;
     margin-top: 1px; 
     box-shadow: 1px 1px 2px gray;
 }
@@ -52,7 +57,7 @@ nav>ul ul li:hover>ul{
 
 nav ul ul ul{
     margin-left: 101%;
-    margin-top: -20%;
+    margin-top: -18.5%;
 }
 nav ul ul ul li{
     width: 300px;

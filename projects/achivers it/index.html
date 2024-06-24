@@ -5,28 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link href="./assets/css/index.css" rel="stylesheet">
+    <!-- <link href="./assets/css/index.css" rel="stylesheet"> -->
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/nav.css" rel="stylesheet">
     <link href="./assets/css/media.css" rel="stylesheet">
-    <link href="./assets/js/index.js">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="./assets/js/index.js"></script>
 
 </head>
 
 <body>
     <header>
-        <section>
+            <section>
             <img src="./assets/images/logo.png" alt="logo">
         </section>
-        <ul>
-            <li><a href="#">All Courses<i class="ri-arrow-down-s-fill"></i></a></li>
-            <li><a href="#">Corporate Training</a></li>
-            <li><a href="#">Placements</a></li>
-            <li><a href="#">Internship</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><i class="ri-menu-line"></i></li>
-        </ul>
+        <nav>
+            <ul id="ful">
+                <li><a href="#">All Courses<i class="ri-arrow-down-s-fill"></i></a>
+                    <ul>
+                        <li><a href="#">Front End Courses</a>
+                            <ul>
+                                <li><a href="#">Angular Courses Training</a></li>
+                                <li><a href="#">React JS Courses Training</a></li>
+                                <li><a href="#">Web Devlopment Course Training</a></li>
+                                <li><a href="#">UI/UX Design Course Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Full Stack Courses</a>
+                            <ul>
+                                <li><a href="#">MERN Stack Course Training</a></li>
+                                <li><a href="#">Full Stack Developer Course Training</a></li>
+                                <li><a href="#">MERN Stack Course Training</a></li>
+                                <li><a href="#">Java Developer Course Training</a></li>
+                                <li><a href="#">Python Developer Course Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Cloud Computing</a>
+                            <ul>
+                                <li><a href="#">AWS DevOps Course Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Data Science</a>
+                            <ul>
+                                <li><a href="#">Data Science Course Training</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Artificial Intelligence</a>
+                            <ul>
+                                <li><a href="#">Artificial Intelligence Course Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Digital Marketing Courses</a>
+                            <ul>
+                                <li><a href="#">Digital Marketing Course Training</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Microsoft Training</a>
+                            <ul>
+                                <li><a href="#">Power BI Course Training</a>
+                            </ul>
+                        </li>
+                        <li><a href="#">Software Testing</a>
+                            <ul>
+                                <li><a href="#">Software Testing Course Training</a>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Corporate Training</a></li>
+                <li><a href="#">Placements</a></li>
+                <li><a href="#">Internship</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <a href="#" onclick="listShow()"><i class="ri-menu-line"></i></a>
+        </nav>
+        
     </header>
 
     <!-- banner -->
@@ -36,6 +90,14 @@
         <!-- <img src="./assets/images/banner (3).avif" alt="banner 3">
         <img src="./assets/images/banner (4).avif" alt="banner 4"> -->
     </section>
+    
+
+
+    <!-- vertical fixed (Contact us) -->
+     <section id="vertical_fixed">
+        <p>CONTACT US</p>
+     </section>
+
 
     <!-- training -->
     <section class="training">

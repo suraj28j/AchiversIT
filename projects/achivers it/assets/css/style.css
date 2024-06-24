@@ -11,11 +11,13 @@
     --bg-color2: white;
     --bg-color3: #343a40;
     --bg-color4:#004085;
+    --bg-color5:#ff4500;
     --font-color1: white;
     --font-color2: black;
     --font-color3: red;
     --font-color4: #0c5397;
     --font-color5: #343a40;
+    --border-color1:lightgray;
 }
 
 @font-face {
@@ -25,7 +27,7 @@
 
 /* header styling */
 header {
-    display: flex;
+    display: grid;
     grid-template-columns: 20% 80%;
     align-items: center;
     height: 65px;
@@ -40,26 +42,7 @@ header img {
     width: 100%;
     height: 100%;
 }
-header ul {
-    display: flex;
-    justify-content: space-evenly;
-    width: 800px;
-    margin-left: 30%;
-}
-header li {
-    line-height: 60px;
-}
-header li:last-child i{
-    color: var(--font-color1);
-    display: none;
-}
-header a {
-    font-size: 115%;
-    color: var(--font-color1);
-}
-header a:hover {
-    color: var(--font-color3);
-}
+
 /* banner */
 .banner {
     height: 400px;
@@ -68,6 +51,22 @@ header a:hover {
     width: 100%;
     height: 100%;
 }
+
+/* vertical fixed (Contact us) */
+#vertical_fixed p{
+    writing-mode: vertical-rl;
+    /* text-orientation:upright; */
+    position:fixed ;
+    left: 97%;
+    top: 45%;
+    background-color: var(--bg-color5);
+    color: var(--font-color1);
+    width: 30px;
+    height: 110px;
+    text-align: center;
+    line-height: 30px;
+}
+
 /* training */
 .training {
     height: 100px;
@@ -109,12 +108,13 @@ header a:hover {
    background-color:var(--bg-color4)
 }
 .training section:hover h4{
-    color: white;
+    color:var(--font-color1);
 }
 h2{
     margin: 2% 5%;
     font-size: 200%;
 }
+
 /* Tranding courses */
 .tranding{
     height: 700px;
@@ -126,8 +126,8 @@ h2{
 .tranding section{
     width: 310px;
     height: 310px;
-    border: 1px solid lightgray;
-    box-shadow: 2px 2px 4px lightgrey;
+    border: 1px solid var(--border-color1);
+    box-shadow: 2px 2px 4px var(--border-color1);
 }
 .tranding img{
     width: 100%;
