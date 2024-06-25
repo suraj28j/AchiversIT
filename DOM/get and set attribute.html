@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg/330px-Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg"
+            alt="virat kohali">
+        <section id="intro">
+            <h2>Virat Kohli</h2>
+            <p>Test 113</p>
+            <p>ODI 292</p>
+        </section>
+    </div>
+
+    <script>
+        let attr = document.getElementsByTagName('img')[0].getAttribute('alt');
+        console.log(attr);
+
+        document.getElementsByTagName('img')[0].setAttribute("alt","VK");
+        
+        let new_attr = document.getElementsByTagName('img')[0].getAttribute('alt');
+        console.log(new_attr);
+    </script>
+</body>
+
+</html>
