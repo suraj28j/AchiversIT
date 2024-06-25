@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            width: 800px;
+            height: 300px;
+            border: 1px solid;
+            background-color: chocolate;
+        }
+
+        #inner {
+            margin: 4% 5%;
+            height: 200px;
+            border: 1px solid;
+            background-color: yellowgreen;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #inner div {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+            text-align: center;
+            background-color: darkorchid;
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2>Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="boxC">C</div>
+            <div>D</div>
+            <div>E</div>
+        </div>
+    </div>
+
+    <script>
+        // [parentElement]
+        // let inner = document.getElementById("inner");
+        // console.log(inner.parentElement); // div#outer
+
+        // let boxC = document.getElementById("boxC");
+        // boxC.parentElement.style.backgroundColor='white';
+
+        // let outer = document.getElementById("outer");
+        // console.log(outer.parentElement); // body#body
+
+        // let mostOuter = document.getElementById("body").parentElement;
+        // console.log(mostOuter.parentElement); // null
+
+        // [parentNode]
+        // let mostOuterNode = document.getElementById("body").parentElement;
+        // console.log(mostOuterNode.parentNode); // #document
+
+        // Note :- parentElement Most Outer Element not available it return null but parentNode return #document
+
+
+        // [children]
+        // let innerChildren = document.getElementById("inner").children; // HTMLCollection
+        // console.log(innerChildren); 
+        // innerChildren[1].style.backgroundColor="pink"
+
+        // [childNode]
+        // let innerChildNode = document.getElementById('inner').childNodes; // NodeList [Note : - it return spcae, enter, comment also in form of key and value]
+        // console.log(innerChildNode); 
+        // innerChildNode[1].style.backgroundColor="red";
+
+        // [firstElementChild]
+        // let firstElementChild = document.getElementById("inner").firstElementChild
+        // console.log(firstElementChild.innerText);
+
+        // [lastElementChild]
+        //  let lastElementChild = document.getElementById("inner").lastElementChild
+        // lastElementChild.style.backgroundColor = 'red'
+
+        // [firstChild]
+        // let firstChild = document.getElementById("inner").firstChild; // [Note : - it return spcae, enter, comment also in form of key and value]
+        // console.log(firstChild);
+
+        // [nextSiblingElement]
+        // let nextSiblingElement = document.getElementById("boxC").nextElementSibling;
+        // console.log(nextSiblingElement.innerText);
+
+        // [nextSibling]
+        // let nextSiblibg = document.getElementById("boxC").nextSibling;// [Note : - it return spcae, enter, comment also in form of key and value]
+        // console.log(nextSiblibg);
+
+         // [nextSiblingElement]
+        //  let previousSiblingElement = document.getElementById("boxC").previousElementSibling;
+        // console.log(previousSiblingElement.innerText);
+
+        // [nextSibling]
+        // let previousSiblibg = document.getElementById("boxC").previousSibling;// [Note : - it return spcae, enter, comment also in form of key and value]
+        // console.log(previousSiblibg);
+    </script>
+</body>
+
+</html>
