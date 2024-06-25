@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target DOM</title>
+</head>
+<body>
+    <div class="box">
+        <h2 class="text">Learning JavaScript</h2>
+        <p class="text">Welcome</p>
+    </div>
+
+    <p>Outer Paragraph 1</p>
+    <p>Outer Paragraph 2</p>
+    <p>Outer Paragraph 3</p>
+
+
+
+    <script>
+        let box = document.getElementsByClassName('box');  // box is HTMLCollection 
+        box[0].style.backgroundColor = 'blue'; // we can access the box with there index number
+        let text = document.getElementsByClassName("text");
+        text[0].style.color = 'green';
+
+        let para = document.getElementsByTagName('p'); // para is HTMLCollection 
+
+        let p = document.querySelectorAll('p');
+    </script>
+</body>
+</html>
