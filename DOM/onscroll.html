@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onscroll</title>
+    <style>
+        #scroll_div{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            /* background-color: lightblue; */
+            overflow: auto;
+        }
+        #contant{
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll_div" onscroll="handleScroll()">
+        <div id="contant">Scroll down to see effect</div>
+    </div>
+
+    <script>
+       
+        function handleScroll(){
+            let scroll_div = document.getElementById("scroll_div");
+            let scrollTop = scroll_div.scrollTop;
+            if(scrollTop>100){
+                scroll_div.style.backgroundColor = 'blue';
+            }else
+            scroll_div.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>
