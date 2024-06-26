@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbling</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <button id="btn">Click</button>
+    </div>
+
+    <script>
+        let btn = document.getElementById("btn");
+        let box = document.getElementById("box");
+
+        // [Bubbling] (child to parent)
+        // btn.addEventListener('click',()=>{
+        //     console.log('This is Button');
+        // })
+        // box.addEventListener('click',()=>{
+        //     console.log('This is div');
+        // })
+
+        // [Captureing] (parent to child)
+        // btn.addEventListener('click',()=>{
+        //     console.log('This is Button');
+        // },true)
+        // box.addEventListener('click',()=>{
+        //     console.log('This is div');
+        // },true)
+
+        // [propagation]
+        // btn.addEventListener('click',(event)=>{
+        //     event.stopPropagation()
+        //     console.log('This is Button');
+        // })
+        // box.addEventListener('click',()=>{
+        //     console.log('This is div');
+        // })
+    </script>
+</body>
+</html>
