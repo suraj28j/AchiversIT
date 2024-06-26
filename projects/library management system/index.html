@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section>
+            <img src="./images/library.png">
+        </section>
+        <section>
+            <h1>Library Management System</h1>
+        </section>
+    </header>
+
+    <main>
+        <button class="btn btn-primary" onclick="addBook()">Add Book</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="itemList"></tbody>
+        </table>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
