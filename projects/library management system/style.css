@@ -16,7 +16,7 @@ header section:nth-child(2){
     font-size: 250%;
     line-height: 200px;
     color: white;
-    text-shadow: 2px 2px 5px gray;
+    text-shadow: 2px 2px 5px red;
 }
 header img{
     width: 100%;
@@ -35,7 +35,7 @@ main{
     margin: 2%;
 }
 
-table,th,td{
+table,td{  
     width: 1000px;
     margin:-5% 20%;
     border: 1px solid;
@@ -52,4 +52,24 @@ table th{
 table td{
     padding: 5px;
     font-size: 15px;
+}
+
+
+/* Media */
+@media screen and (max-width:1024px){
+    table{
+        width: 700px;
+    }
+    header section:nth-child(2){
+        font-size: 200%;
+    }
+}
+@media screen and (max-width:768px){
+    table{
+        width: 500px;
+        padding: 2%;
+    }
+    header section:nth-child(2){
+        font-size: 150%;
+    }
 }
