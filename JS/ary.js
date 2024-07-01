@@ -38,7 +38,8 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // console.log(ary2.unshift("Dhoni"));  // total elements 6+1 = 7
 
 // join() //
-// console.log(ary1.join()); // return a string 
+// console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string 
+console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string 
 // console.log(ary2.join(" ")); // return a string 
 
 // slice() //
