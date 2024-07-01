@@ -1,0 +1,57 @@
+.container{
+    width: 300px;
+    height: auto;
+    border: 1px solid;
+    background: linear-gradient(135deg,green,yellowgreen);
+    border-radius: 10px;
+}
+.search_box{
+    display: flex;
+    margin: 10px;
+    gap: 30px;
+}
+.search_box input{
+    width: 220px;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+#btn{
+    margin-left: -20px;
+    width: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+}
+.weather_body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.weather_body img{
+    width: 50%;
+}
+.extraDetails{
+    display: flex;
+    justify-content:space-between;
+    /* align-content: space-around; */
+    /* border: 2px solid; */
+}
+#humidity_box,#windspeed_box{
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+}
+.extraDetails i{
+    font-size: 35px;
+    margin-top: 10px;
+}
+/* #humidity,#windspeed{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
