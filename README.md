@@ -2,18 +2,17 @@
 
 ## Java Script Notes
 
-String 
+## Projects
 
-Array
+AchiversIT WebClone
 
-Object
+Fila
 
-Function
+Sticky Note
 
-Destructur
+Weather api
 
-Prototype
+Library Management System
 
-Module
 
 > Batch 22/04/2024
