@@ -38,6 +38,9 @@
             background-color: blueviolet;
             margin: 30px 50px;
         }
+        #box{
+            margin-top: 100px;
+        }
     </style>
 </head>
 <body>
@@ -52,6 +55,12 @@
         </div>
     </div>
 
+
+
+    <div id="box">
+        <h3>preventDefault</h3>
+        <a href="https://www.amazon.in" id="anchor">Amazon</a>
+    </div>
     <script>
         let one = document.getElementById("one");
         let two = document.getElementById("two");
@@ -111,6 +120,15 @@
         },false);
 
 
+        
+        /* preventDefault() - The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled,
+        its default action should not be taken as it normally would be.
+        Syntax:- e.preventDefault();
+        */
+       let anchor = document.getElementById("anchor");
+       anchor.addEventListener('click',function(e){
+        e.preventDefault();
+       })
 
     </script>
 </body>
