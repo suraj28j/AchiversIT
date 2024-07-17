@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <h1>Event Object</h1>
+    <button id="btn">Click</button>
+
+    <script>
+        /*
+        DOM events pass an Event object as an arguments to handlers.
+        This object contain extra information about that event that occurred.
+        Ex - element.addEventListener('click', function(e){ });
+        */
+       let btn = document.getElementById('btn');
+       btn.addEventListener('click',function(e){
+        console.log(e);
+       })
+    </script>
+</body>
+</html>
