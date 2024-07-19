@@ -45,10 +45,10 @@ In JavaScript, for example, you can serialize an object to a JSON string by call
 // console.log(Object.keys(employee)); // return array
 
 // Object.values() //
-// console.log(Object.values(employee));
+// console.log(Object.values(employee)); // return array
 
 // Object.entries() //
-// console.log(Object.entries(employee));
+// console.log(Object.entries(employee)); // return nested array
 
 // Object.freeze() //
 // Object.freeze(employee);
