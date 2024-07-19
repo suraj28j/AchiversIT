@@ -104,20 +104,20 @@
          // [ stopImmediate Propagation() - Prevents other listeners of the same event from being called.]
         // Syntax:- e.stopImmediatePropagation();
 
-        one.addEventListener('click',function(e){
-            console.log(1);
-        },false);
-        two.addEventListener('click',function(e){
-            console.log(2);
-            e.stopPropagation();
-            // e.stopImmediatePropagation();
-        },false);
-        three.addEventListener('click',function(e){
-            console.log(3);
-        },false);
-        four.addEventListener('click',function(e){
-            console.log(4);
-        },false);
+        // one.addEventListener('click',function(e){
+        //     console.log(1);
+        // },false);
+        // two.addEventListener('click',function(e){
+        //     console.log(2);
+        //     e.stopPropagation();
+        //     // e.stopImmediatePropagation();
+        // },false);
+        // three.addEventListener('click',function(e){
+        //     console.log(3);
+        // },false);
+        // four.addEventListener('click',function(e){
+        //     console.log(4);
+        // },false);
 
 
         
@@ -125,10 +125,10 @@
         its default action should not be taken as it normally would be.
         Syntax:- e.preventDefault();
         */
-       let anchor = document.getElementById("anchor");
-       anchor.addEventListener('click',function(e){
-        e.preventDefault();
-       })
+    //    let anchor = document.getElementById("anchor");
+    //    anchor.addEventListener('click',function(e){
+    //     e.preventDefault();
+    //    })
 
     </script>
 </body>
