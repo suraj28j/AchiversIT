@@ -1,9 +1,11 @@
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Suraj from './Suraj';
 import Style from './Style'
 import ExampleProps from './ExampleProps'
 import ExampleListAndKeys from './ExampleListAndKeys'
 import ConditionalRendering from './ConditionalRendering'
+import EventHandling from './EventHandling'
 
 function App() {
   let user = {
@@ -21,6 +23,7 @@ function App() {
       <ExampleProps name = "Suraj" user = {user} nums = {nums} />
       <ExampleListAndKeys/>
       <ConditionalRendering/>
+      <EventHandling/>
     </div>
   );
 }
