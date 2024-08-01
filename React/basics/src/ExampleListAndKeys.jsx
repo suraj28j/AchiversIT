@@ -1,6 +1,12 @@
 import React from 'react'
 
 const ExampleListAndKeys = () => {
+    let tblStyle = {
+        tableBorder:{
+            border:'1px solid',
+            borderCollapse:'collapse'
+        }
+    } 
 
     let user = [
         {
@@ -237,25 +243,25 @@ const ExampleListAndKeys = () => {
     return (
         <div>
             <h2>List and Key Example</h2>
-            <table>
+            <table style={tblStyle.tableBorder}>
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>User Name</th>
-                        <th>Email</th>
-                        <th>City</th>
+                        <th style={tblStyle.tableBorder}>Id</th>
+                        <th style={tblStyle.tableBorder}>Name</th>
+                        <th style={tblStyle.tableBorder}>User Name</th>
+                        <th style={tblStyle.tableBorder}>Email</th>
+                        <th style={tblStyle.tableBorder}>City</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
                         user.map((currElm, index, ary) => (
                             <tr key={currElm.id}>
-                                <td>{currElm.id}</td>
-                                <td>{currElm.name}</td>
-                                <td>{currElm.username}</td>
-                                <td>{currElm.email}</td>
-                                <td>{currElm.address.city}</td>
+                                <td style={tblStyle.tableBorder}>{currElm.id}</td>
+                                <td style={tblStyle.tableBorder}>{currElm.name}</td>
+                                <td style={tblStyle.tableBorder}>{currElm.username}</td>
+                                <td style={tblStyle.tableBorder}>{currElm.email}</td>
+                                <td style={tblStyle.tableBorder}>{currElm.address.city}</td>
                             </tr>
                         ))
                     }

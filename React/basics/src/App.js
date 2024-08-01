@@ -3,6 +3,7 @@ import Suraj from './Suraj';
 import Style from './Style'
 import ExampleProps from './ExampleProps'
 import ExampleListAndKeys from './ExampleListAndKeys'
+import ConditionalRendering from './ConditionalRendering'
 
 function App() {
   let user = {
@@ -19,6 +20,7 @@ function App() {
       <Style/>
       <ExampleProps name = "Suraj" user = {user} nums = {nums} />
       <ExampleListAndKeys/>
+      <ConditionalRendering/>
     </div>
   );
 }
