@@ -1,13 +1,16 @@
 import React from 'react'
 
 const EventHandling = () => {
+
     let handleChange = (e) => {
         console.log(e.target.value);
     }
+
     let handleSubmit = (e) => {
         e.preventDefault();
         console.log("Form Submit Successful");
     }
+    
   return (
     <div>
       <div className='container'>
