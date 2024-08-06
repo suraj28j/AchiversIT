@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color: rgb(38, 91, 223);
+    height: 150px;
+    text-align: center;
+    border: 1px solid rgb(38,91,223);
+}
+header h1,header p{
+    margin-top: 30px;
+}
+.user_details{
+    display: flex;
+    justify-content: space-between;
+}
+.customer_profile,.opration,.balance{
+    width: 400px;
+}
+.customer_profile h2,.customer_profile h3{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.opration h2,.inputBox,.btns{
+    margin-top: 30px;
+    margin-left: 15px;
+}
+.balance h2,.balance h3{
+    margin-top: 35px;
+}
+#btn1,#btn2{
+    width: 80px;
+    height: 30px;
+}
+#transaction{
+    margin-top: 100px;
+    margin-left: 15px;
+}
+#transaction p{
+    margin: 25px 5px;
+}

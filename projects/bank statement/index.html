@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bank Application</h1>
+        <p id="time">Time</p>
+    </header>
+    <section class="user_details">
+        <div class="customer_profile">
+            <h2>Customer Profile</h2>
+            <h3>Name : Suraj Kumar</h3>
+            <h3>Account Number : *****9858</h3>
+        </div>
+        <div class="opration">
+            <h2>Opration</h2>
+            <div class="inputBox">
+                <label for="input">Amount:</label>
+                <input type="text" id="input">
+            </div>
+            <div class="btns">
+                <button id="btn1" onclick="transaction('Deposit')">Deposit</button>
+                <button id="btn2" onclick="transaction('Withdraw')">Withdraw</button>
+            </div>
+        </div>
+        <div class="balance">
+            <h2>Balance</h2>
+            <h3 id="bal">Current Balance: ₹ 0</h3>
+        </div>
+    </section>
+
+    <section id="transaction">
+        <h2>Transaction History</h2>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
