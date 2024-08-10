@@ -11,7 +11,7 @@ function CarouselComponent() {
 
           <div className='row'>
             <div className='col-1'></div>
-            <div className='col-4'>
+            <div className='col-4 '>
               <h5>50% Off For Your First Shopping</h5>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Vel inventore ex aliquam facere eius aspernatur atque! 
