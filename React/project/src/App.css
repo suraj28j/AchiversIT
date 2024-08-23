@@ -45,4 +45,6 @@ opacity: 0;
 }
 .card button:hover{
   background-color:#0f3460 ;
+  color: white;
 }
+
