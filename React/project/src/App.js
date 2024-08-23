@@ -1,6 +1,8 @@
 import './App.css';
-import Header from './Header';
+import Header from './Header/Header';
 import Router from './Routing/Router';
+import Footer from './Footer/Footer';
+
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <div>
       <Header/>
       <Router/>
+      <Footer/>
     </div>
   );
 }
