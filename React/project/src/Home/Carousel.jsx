@@ -8,7 +8,7 @@ import watch from '../Images/watch-07.png'
 const Carousel = () => {
   return (
     <div className='carousel slide' data-bs-ride="carousel">
-      <div className='carousel-inner d-flex align-items-center' data-bs-interval='1000'style={{height:'75vh'}}>
+      <div className='carousel-inner d-flex align-items-center' data-bs-interval='1000' style={{height:'75vh'}}>
 
         <div className='carousel-item active'>
           <div className='row ms-4 me-4'>
@@ -22,7 +22,7 @@ const Carousel = () => {
             </div>
             <div className='col-md-1'></div>
             <div className='col-md-4 d-flex justify-content-center'>
-              <img src={sofa} alt='sofa' className='img-fluid' />
+              <img src={sofa} alt='sofa' className='img-fluid'/>
             </div>
             <div className='col-md-1'></div>
           </div>
