@@ -23,14 +23,17 @@ const Shop = () => {
     const getData = products.filter((item) => {
       return item.category === category;
     })
-      setProductCategory(getData)
+      setProductCategory(getData);
+      setCoverHeading(category);
   }
 
   const onChangeHandler = (e) => {
       console.log(e.target.value);
-      let getValue = e.target.value
-      
-      
+      let findData = products.filter((item)=>{
+        return item.category.match(e.target.value) || item.productName.match(e.target.value)
+      })
+      setProductCategory(findData)
+      // setCoverHeading(findData)
   }
 
   return (
@@ -43,7 +46,7 @@ const Shop = () => {
       <div className='container mt-4 mb-4'>
 
         <div className='row mb-4'>
-          <div className='col-md-3 ms-1'>
+          <div className='col-md-4 mb-2'>
             <div class="dropdown">
               <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: '#0f3460', color: 'white' }}>
                 Filter By Category
@@ -59,7 +62,7 @@ const Shop = () => {
           </div>
           {/* <div className='col-md-1'></div> */}
           <div className='col-md-8'>
-            <form class="container-fluid">
+            <form class="">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search..." aria-label="Username" aria-describedby="basic-addon1" 
                 onInput={onChangeHandler}

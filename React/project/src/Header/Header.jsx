@@ -6,7 +6,9 @@ const Header = () => {
     return (
         <div className='sticky-top'>
             <nav className='navbar navbar-expand-lg p-1 shadow p-3 bg-white rounded'>
-                <img className='navbar-brand' src={logo} alt='log' />
+                <div className='navbar-brand'>
+                <img className='img-fluid' src={logo} alt='logo' />
+                </div>
                 <button className='navbar-toggler' data-bs-toggle='collapse' data-bs-target='#navbarcollapse'>
                     <span className='navbar-toggler-icon'></span>
                 </button>
