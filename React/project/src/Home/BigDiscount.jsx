@@ -1,8 +1,16 @@
 import React from 'react'
 import { discoutProducts } from '../Images/products'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const BigDiscount = () => {
+    const dispatch = useDispatch();
+    
+    let buttonHandler = () => {
+        toast.success("Added Successfully")
+      }
     return (
         <div style={{ backgroundColor: '#f6f9fc' }}>
             <div className='container-md mt-4 mb-4 d-flex justify-content-center'>
@@ -37,6 +45,7 @@ const BigDiscount = () => {
                                         <h5>$ {items.price}</h5>
                                         <button
                                             style={{ border: '0px', borderRadius: '50%', width: '40px', height: '40px', paddingBottom: '4px', fontSize: '150%' }}
+                                            onClick={()=>{dispatch(addToCart(items));buttonHandler()}}
                                         >+</button>
                                     </div>
                                 </div>

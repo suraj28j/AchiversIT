@@ -1,11 +1,21 @@
 import React from 'react'
 import { products } from '../Images/products'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const NewArrivals = () => {
+
+  const dispatch = useDispatch()
+
   const newArrivals = products.filter((item)=>{
     return item.category === 'mobile' || item.category === 'wireless'
   })
+
+  let buttonHandler = () => {
+    toast.success("Added Successfully")
+  }
 
   return (
     <div className='container mt-4 mb-4'>
@@ -37,6 +47,7 @@ const NewArrivals = () => {
               <h5>$ {item.price}</h5>
               <button
               style={{ border: '0px', borderRadius: '50%', width: '40px', height: '40px', paddingBottom: '4px',fontSize:'150%' }}
+              onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
               >+</button>
             </div>
             </div>

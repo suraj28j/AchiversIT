@@ -1,11 +1,22 @@
 import React from 'react'
 import { products } from '../Images/products'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/productAction/ProductAction'
+import { toast } from 'react-toastify'
+
 
 const BestSales = () => {
+
+    const dispatch = useDispatch()
+
     const bestSales = products.filter((item) => {
         return item.category === 'sofa'
     })
+
+    let buttonHandler = () => {
+        toast.success("Added Successfully")
+      }
 
     return (
         <div style={{ backgroundColor: '#f6f9fc' }}>
@@ -39,6 +50,7 @@ const BestSales = () => {
                                         <h5>$ {item.price}</h5>
                                         <button
                                             style={{ border: '0px', borderRadius: '50%', width: '45px', height: '45px', paddingBottom: '4px', fontSize: '150%' }}
+                                            onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
                                         >+</button>
                                     </div>
 

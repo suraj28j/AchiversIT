@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import cover from '../Images/cover.jpg'
 import { products } from '../Images/products'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/productAction/ProductAction'
+import { toast } from 'react-toastify'
 
 const Product = () => {
+
+  const dispatch = useDispatch()
 
   const { id } = useParams();
   // console.log(id);
@@ -33,6 +38,17 @@ const Product = () => {
     setLike(likeItem)
   }
 
+  const buttonHandler = (e) => {
+    e.preventDefault();
+    toast.success("Added Successfully");
+  }
+
+  // const toastMsg = () => {
+  //     toast.success("Added Successfully")
+  // }
+
+ 
+
   return (
     <>
       <div className='position-relative'>
@@ -59,9 +75,11 @@ const Product = () => {
               <p className='ms-4'>category:{product.category}</p>
             </div>
             <p>{product.shortDesc}</p>
-            <form className='mt-4'>
+            <form className='mt-4' onSubmit={buttonHandler}>
               <input className='form-control' type='text' style={{ width: '100px' }}></input>
-              <button className='btn mt-3' type='submit' style={{ backgroundColor: '#0f3460', color: 'white' }}>Add To Cart</button>
+              <button className='btn mt-3' type='submit' style={{ backgroundColor: '#0f3460', color: 'white' }}
+              onClick={()=>{dispatch(addToCart(product));}}
+              >Add To Cart</button>
             </form>
           </div>
         </div>

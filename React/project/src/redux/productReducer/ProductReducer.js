@@ -1,15 +1,22 @@
-const initState = [
-    cartData = []
-]
+const initState = {
+    cartData : [],
+    products : []
+}
 
 export const productReducer = (state=initState,action) => {
-        console.log(action);
-        
+        // console.log(action);        
         switch(action.type){
             case 'ADD_TO_CART' :
-                return {}
+                    return{
+                        ...state,cartData:[...state.cartData,action.payload]
+                    }
             case 'REMOVE_FROM_CART' :
-                return {}
+                let filterItem = state.cartData.filter((item)=>{
+                    return  item.id !== action.payload
+                })
+                return {
+                    ...state,cartData:filterItem
+                }
             default :return state
         }
 }

@@ -2,8 +2,13 @@ import React, { useState, useEffect } from 'react'
 import cover from '../Images/cover.jpg'
 import { products } from '../Images/products'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const Shop = () => {
+
+  const dispatch = useDispatch();
 
   const [productCategory, setProductCategory] = useState([]);
   const[coverHeading,setCoverHeading] = useState('product')
@@ -34,6 +39,10 @@ const Shop = () => {
       })
       setProductCategory(findData)
       // setCoverHeading(findData)
+  }
+
+  let buttonHandler = () => {
+    toast.success("Added Successfully")
   }
 
   return (
@@ -101,6 +110,7 @@ const Shop = () => {
                     <h5>$ {item.price}</h5>
                     <button
                       style={{ border: '0px', borderRadius: '50%', width: '45px', height: '45px', paddingBottom: '4px', fontSize: '150%' }}
+                      onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
                     >+</button>
                   </div>
 
