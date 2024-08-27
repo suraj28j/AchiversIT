@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 
-const UseEffectHooks = () => {
+const UseEffect = () => {
     let [state, setState] = useState([])
     useEffect(() => {
         getData();
@@ -14,7 +14,7 @@ const UseEffectHooks = () => {
     return (
         // console.log(state)
 
-        <div className='conatiner mt-4'>
+        <div className='container mt-4'>
 
 
         <table className='table table-bordered table-hover text-center'>
@@ -46,4 +46,4 @@ const UseEffectHooks = () => {
     )
 }
 
-export default UseEffectHooks
+export default UseEffect

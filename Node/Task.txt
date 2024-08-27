@@ -1,0 +1,12 @@
+Date: 27/08/2024
+
+Question 1 : What is difference between fs.writeFile and fs.writeFileSync
+Answer :     writeFile and writeFileSync. Both functions take a file path and data as arguments, and write the data to the specified file.
+             difference between the two functions: 
+             writeFile is asynchronous, while writeFileSync is synchronous This means that writeFile will return immediately,
+             before the file has been written and only its callback will be called when the write operation is completed
+             while writeFileSync will block until the file has been written
+
+Question 2:  Creat own file with our details
+             const fs = require('fs');
+             fs.writeFileSync('suraj.txt','Name : Suraj , Age : 33 , Qualification : Diploma')

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-const UseStateHook = () => {
+const UseState = () => {
     let[count,setCount] = useState(0);
 
     const Increment = () => {
@@ -36,4 +36,4 @@ const UseStateHook = () => {
   )
 }
 
-export default UseStateHook
+export default UseState

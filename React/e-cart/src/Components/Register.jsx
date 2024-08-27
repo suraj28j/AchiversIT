@@ -5,7 +5,7 @@ const Register = () => {
   return (
     <div className='container'>
       <div className='row'>
-        <h2 className='text-center mt-4'>Register</h2>
+       <h2 className='text-center mt-4'>Register</h2>
         <hr className='mt-2'/>
         <div className='col-md-4'></div>
         <div className='col-md-4'>
