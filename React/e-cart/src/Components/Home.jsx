@@ -1,124 +1,128 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import cover from '../Assets/Images/cover.jpg'
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/productAction/ProductAction';
-
+// import { Link } from 'react-router-dom'
 const Home = () => {
 
     const dispatch = useDispatch();
-    const[products,setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         getData();
-    },[])
+    }, [])
 
-    const getData = async() => {
+    const getData = async () => {
         let data = await fetch(`https://fakestoreapi.com/products`)
         let res = await data.json();
         console.log(res);
         setProducts(res)
     }
 
-    const getMenCollection = async() => {
+    const getMenCollection = async () => {
         let data = await fetch(`https://fakestoreapi.com/products`)
         let res = await data.json();
-        const getData = res.filter((item)=>{
+        const getData = res.filter((item) => {
             return item.category === `men's clothing`
         })
         console.log(getData);
         setProducts(getData);
     }
-    const getWomenCollection = async() => {
+    const getWomenCollection = async () => {
         let data = await fetch(`https://fakestoreapi.com/products`)
         let res = await data.json();
-        const getData = res.filter((item)=>{
+        const getData = res.filter((item) => {
             return item.category === `women's clothing`
         })
         setProducts(getData);
     }
-    const getJeweleryCollection = async() => {
+    const getJeweleryCollection = async () => {
         let data = await fetch(`https://fakestoreapi.com/products`)
         let res = await data.json();
-        const getData = res.filter((item)=>{
+        const getData = res.filter((item) => {
             return item.category === `jewelery`
         })
         setProducts(getData);
     }
-    const getElectronicsCollection = async() => {
+    const getElectronicsCollection = async () => {
         let data = await fetch(`https://fakestoreapi.com/products`)
         let res = await data.json();
-        const getData = res.filter((item)=>{
+        const getData = res.filter((item) => {
             return item.category === `electronics`
         })
         setProducts(getData);
     }
-  return (
-    <>
-      <img src={cover} alt='cover'className='w-100' style={{height:'25vh'}}/>
-      <h3 className='text-center mt-4'>Latest Products</h3>
-      <div className='container mt-4'>
+    return (
+        <>
+            {/* Home Cover and Heading */}
+            <img src={cover} alt='cover' className='w-100' style={{ height: '25vh' }} />
+            <h3 className='text-center mt-4'>Latest Products</h3>
 
-        <div className='row'>
-            <div className='col-md-3'></div>
-            <div className='col-md-6 '>
-                <div className='row g-2'>
-                    <div className='col-md-1 d-flex justify-content-center'><button className='btn btn-outline-dark'
-                    onClick={getData}
-                    >All</button></div>
-                    <div className='col-md-3 d-flex justify-content-center'><button className='btn btn-outline-dark'
-                    onClick={getMenCollection}
-                    >Men's Clothing</button></div>
-                    <div className='col-md-4 d-flex justify-content-center'><button className='btn btn-outline-dark'
-                    onClick={getWomenCollection}
-                    >Women's Clothing</button></div>
-                    <div className='col-md-2 d-flex justify-content-center'><button className='btn btn-outline-dark'
-                    onClick={getJeweleryCollection}
-                    >Jewelary</button></div>
-                    <div className='col-md-2 d-flex justify-content-center'><button className='btn btn-outline-dark'
-                    onClick={getElectronicsCollection}
-                    >Electrinics</button></div>
-                </div>
-            </div>
-            <div className='col-md-3'></div>
-        </div>
+            {/* Buttons */}
+            <div className='container mt-4'>
+                <div className='row'>
+                    <div className='col-md-3'></div>
+                    <div className='col-md-6 '>
 
-        <div className='row mt-4'>
-            {
-                products.map((item)=>(
-                    <div className='col-md-4 g-4 '>
-                        <div className='card d-flex justify-content-center' style={{height:'100%'}}>
-                            <div className='card-body d-flex align-items-center'>
-                                <div className='card-img-top d-flex justify-content-center '>
-                                <img className='w-50' src={item.image} alt={item.title}/>
-                                </div>
-                            </div>
-                            <div className='card-title d-flex justify-content-center ms-2 me-2'>
-                                <h5>{item.title}</h5>
-                            </div>
-                            <div className='card-sub-title d-flex justify-content-center  ms-2 me-2'>
-                                <p>{item.description}</p>
-                            </div>
-                            <div className='card-sub-title d-flex justify-content-center'>
-                                <p>$ {item.price}</p>
-                            </div>
-                            <div className='d-flex justify-content-between ms-4 me-4 mb-1'>
-                            <button className='btn btn-primary'>Details</button>
-                            <button className='btn btn-primary'
-                            onClick={()=>dispatch(addToCart(item))}
-                            >Add to Cart</button>
-                            </div>
-                            
-                        </div>
-                        
-                        
+                        <nav class="nav nav-pills flex-column flex-md-row">
+                            <button className="flex-sm-fill text-sm-center me-2 mt-1 btn btn-secondary" onClick={getData}>All</button>
+                            <button className="flex-sm-fill text-sm-center me-2 mt-1 btn btn-secondary"
+                            onClick={getMenCollection}
+                            >Men's Clothing</button>
+                            <button className="flex-sm-fill text-sm-center me-2 mt-1 btn btn-secondary"
+                            onClick={getWomenCollection}
+                            >Women's Clothing</button>
+                            <button className="flex-sm-fill text-sm-center me-2 mt-1 btn btn-secondary"
+                            onClick={getJeweleryCollection}
+                            >Jewelary</button>
+                            <button className="flex-sm-fill text-sm-center mt-1 btn btn-secondary"
+                            onClick={getElectronicsCollection}
+                            >Electrinics</button>
+                        </nav>
 
                     </div>
-                ))
-            }
-        </div>
-      </div>
-    </>
-  )
+                    <div className='col-md-3'></div>
+
+                </div>
+
+                <div className='row mt-4'>
+                    <div className='col-md-1'></div>
+                    <div className='col-md-10'>
+                        <div className='row d-flex justify-content-center'>
+                            {
+                                products.map((item) => (
+                                    <div className='col-md-4 g-3'>
+
+                                        <div class="card" style={{ height: '24rem' }}>
+                                            <div className='d-flex justify-content-center mt-2'>
+                                                <img src={item.image} className="img-fluid" alt={item.title} style={{ height: '10rem', width: '15rem' }} />
+                                            </div>
+                                            <div class="card-body">
+                                                <div style={{ overflow: 'hidden', height: '1.5rem' }}>
+                                                    <h5 class="card-title">{item.title}</h5>
+                                                </div>
+                                                <div className='mt-2' style={{ overflow: 'hidden', height: '3rem' }}>
+                                                    <p class="card-text" >{item.description}</p>
+                                                </div>
+                                                <h6 className='mt-4 text-center'>$ {item.price}</h6>
+                                                <div className='d-flex justify-content-center mt-4'>
+                                                    <button className='btn btn-dark me-3'>Details</button>
+                                                    <button className='btn btn-dark'
+                                                        onClick={() => dispatch(addToCart(item))}
+                                                    >Add to Cart</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                    <div className='col-md-1'></div>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default Home

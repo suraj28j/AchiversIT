@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+
 import { addToCart, setDecrement } from '../redux/productAction/ProductAction'
 
 
@@ -30,7 +30,7 @@ const Cart = () => {
 
                                 <div className='row border' style={{ backgroundColor: 'white' }}>
                                     <div className='col-md-3 d-flex justify-content-center align-items-center'>
-                                        <img src={item.image} alt={item.title} className='w-50 h-50' />
+                                        <img src={item.image} alt={item.title} className='w-75 h-75' />
                                     </div>
                                     <div className='col-md-6'>
                                         <h4 className='mt-4'>{item.title}</h4>

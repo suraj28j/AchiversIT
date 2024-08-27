@@ -18,23 +18,23 @@ const Header = () => {
                     <Link className='nav-link active' to='/'>Home</Link>
                 </li>
                 <li className='nav-item'>
-                    <Link className='nav-link active'>Products</Link> 
+                    <Link className='nav-link active' to='/products'>Products</Link> 
                 </li>
                 <li className='nav-item'>
-                    <Link className='nav-link active'>About</Link> 
+                    <Link className='nav-link active' to='/about'>About</Link> 
                 </li>
                 <li className='nav-item'>
-                    <Link className='nav-link active'>Contact</Link>
+                    <Link className='nav-link active' to='/contact'>Contact</Link>
                 </li>
             </ul>
             <ul className='navbar-nav ms-auto me-4 mb-2 mb-lg-0'>
                 <li className='nav-item'>
-                    <Link className='nav-link active'>
+                    <Link className='nav-link active' to='/login'>
                     <button className='btn btn-secondary'>Login</button>
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link className='nav-link active'>
+                    <Link className='nav-link active' to='/register'>
                     <button className='btn btn-secondary'>Register</button>
                     </Link> 
                 </li>
