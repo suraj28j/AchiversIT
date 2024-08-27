@@ -67,7 +67,7 @@ const UseEffectPagination = () => {
                         )
                     }
                     {
-                        [1, 2, 3, 4, 5, 6].map((num) => (
+                        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
                             <button className='btn btn-primary ms-2' onClick={() => buttonHandler(num)}>{num}</button>
                         ))
                     }
