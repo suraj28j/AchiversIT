@@ -1,7 +1,7 @@
 * {
     margin: 0px;
     padding: 0px;
-    list-style: none;
+    /* list-style: none; */
     font-family: roboto;
     text-decoration: none;
 }
@@ -115,6 +115,7 @@ h2{
     font-size: 200%;
 }
 
+
 /* Tranding courses */
 .tranding{
     height: 700px;
@@ -128,8 +129,32 @@ h2{
     height: 310px;
     border: 1px solid var(--border-color1);
     box-shadow: 2px 2px 4px var(--border-color1);
+    position: relative;
 }
 .tranding img{
     width: 100%;
     height: 100%;
+}
+
+.tranding .over{
+    position: absolute;
+    top:0;left:0;right:0;bottom:0;
+    
+    opacity: 0;
+    background-color: black;
+    transition:opacity 0.5s linear ;
+    /* transition: transform 0.5 linear; */
+    overflow-y: scroll;
+}
+.tranding .content{
+    color: white;
+    margin-left: 20px;
+    line-height: 30px;
+}
+.tranding .content ul{
+    margin-left: 20px;
+    /* border: 1px solid; */
+}
+.tranding section:first-child:hover .over{
+    opacity: 0.7;
 }

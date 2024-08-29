@@ -30,4 +30,7 @@ Question 2: respone html
             }
             const server = http.createServer(requestListnerCb);
             server.listen(3000)
-             
+
+
+Date: 29/08/2024 
+Question 1 :  system file data render on screen
