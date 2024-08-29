@@ -1,16 +1,13 @@
-import {name,user,ary,userName} from "./import.mjs"
-console.log(name);
-console.log(user);
-console.log(ary);
-userName();
+export let name = "Suraj";
+export let user = {
+        name,
+        age:33,
+        city:"Bangalore"
+}
+// console.log(user);
 
 
-/*
-import file and export file extantion should be .mjs
-
-in import file 
-useing 'import' keyword before declear the vaiables,functions,arrays,objects
-
-in export file
-using import keyword and mention variables,function,arrays,objects in Curly brace { } from "./fileName.mjs"
-*/
+export let ary = ["Sai",30,"Banglaore"];
+export function userName(){
+    console.log(`My name is ${name}`);
+}

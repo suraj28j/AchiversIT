@@ -14,3 +14,20 @@ Date: 28/08/2024
 Question 1 : What is difference between process.exit() and process.exitCode 
 Answer :     process.exit() will exit as quickly as possible (after all 'exit' event listeners are called), even if there are pending async operations, including I/O operations.
              exitCode let the process exit gracefully when all operations have completed.
+Question 2: respone html
+            const http = require('http');
+            function requestListnerCb(req,res){
+            console.log("Server is runing");
+            res.setHeader("Content-Type","text/html");
+            res.write("<html>")
+            res.write("<head><title>My Profile</title></head>")
+            res.write("<h1>Hello ! my name is Suraj</h1>");
+            res.write("<p>Learning Node JS</p>")
+            res.write("<input type='text'><br>")
+            res.write("<button>Submit</botton>")
+            res.write("</html>")
+            res.end();
+            }
+            const server = http.createServer(requestListnerCb);
+            server.listen(3000)
+             

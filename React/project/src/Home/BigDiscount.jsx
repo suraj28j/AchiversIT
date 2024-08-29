@@ -14,9 +14,12 @@ const BigDiscount = () => {
     return (
         <div style={{ backgroundColor: '#f6f9fc' }}>
             <div className='container-md mt-4 mb-4 d-flex justify-content-center'>
-                <div className='row g-2 mt-4'>
+                <div className='row mt-4'>
                     <h2 className='text-center mt-4'>Big Discount</h2>
-                    {
+                    <div className='col-md-1'></div>
+                    <div className='col-md-10'>
+                        <div className='row g-2'>
+                        {
                         discoutProducts.map((items) => (
                             <div className='col-md-4 '>
                                 <div className='card h-100'>
@@ -52,7 +55,9 @@ const BigDiscount = () => {
                             </div>
                         ))
                     }
-
+                        </div>
+                    </div>
+                    <div className='col-md-1'></div>
                 </div>
             </div>
         </div>

@@ -21,9 +21,12 @@ const BestSales = () => {
     return (
         <div style={{ backgroundColor: '#f6f9fc' }}>
             <div className='container mt-4 mb-4'>
-                <div className='row g-2 d-flex justify-content-center'>
+                <div className='row '>
                     <h2 className='text-center mt-4'>Best Sales</h2>
-                    {
+                    <div className='col-md-1'></div>
+                    <div className='col-md-10'>
+                        <div className='row g-2 d-flex justify-content-center'>
+                        {
                         bestSales.map((item) => (
                             <div className='col-md-4'>
                                 <div className='card' style={{ height: '100%' }}>
@@ -59,6 +62,9 @@ const BestSales = () => {
                             </div>
                         ))
                     }
+                        </div>
+                    </div>
+                    <div className='col-md-1'></div>
                 </div>
             </div>
         </div>
