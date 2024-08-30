@@ -1,12 +1,15 @@
 const http = require('http');
 const fs = require('fs')
-// const path =  require('path')
-// const filename = path.dirname('./pic.webp')
 
 
 // function requestListnerCb(req,res){
+
 //     console.log("Server is runing");
-//     // console.log(filename);
+
+//     console.log("URL : ",request.url);
+//     console.log("Method : ",request.method);
+//     console.log("Headers : ",request.headers);
+
 //     res.setHeader("Content-Type","text/html");
 //     res.write("<html>")
 //     res.write("<body>")
@@ -20,6 +23,7 @@ const fs = require('fs')
 //     res.write("</html>")
 //     res.end();
 // }
+// requestListnerCb is a plan CB function which is going to take request and respone as a parameter
 
 const server = http.createServer((req, res) => {
     // console.log(req);

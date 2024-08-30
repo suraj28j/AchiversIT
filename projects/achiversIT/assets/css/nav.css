@@ -21,6 +21,7 @@ nav>a{
 }
 
 nav ul ul {
+    list-style: none;
     position: absolute;
     z-index: 1;
     background-color:var(--font-color1);
