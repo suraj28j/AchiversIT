@@ -5,9 +5,7 @@ console.log(routes);
 
 
 // function requestListnerCb(req,res){
-
 //     console.log("Server is runing");
-
 //     console.log("URL : ",request.url);
 //     console.log("Method : ",request.method);
 //     console.log("Headers : ",request.headers);
@@ -25,6 +23,7 @@ console.log(routes);
 //     res.write("</html>")
 //     res.end();
 // }
+
 // requestListnerCb is a plan CB function which is going to take request and respone as a parameter
 
 const server = http.createServer(routes);
