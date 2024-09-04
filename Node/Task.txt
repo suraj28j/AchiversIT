@@ -128,3 +128,27 @@ Answer :    var http = require('http'); // require http
             var server = http.createServer(this);
             return server.listen.apply(server, arguments);
             };
+
+
+Date: 04/09/2024 
+Question 1 :  What is the body parser used for ?
+Answer : body parser is middleware. It processes incoming request bodies, making it easier to handle POST and PUT requests
+
+Question 2 :  Now add one more input tag in the add product page so that user can input size of the product.
+Code => :   app.use ( "/add-product", (req,res,next) => {
+            res.send(`
+            <form action = '/product' method = 'POST'>
+            <input type = 'text' name = 'title' placeholder ='product title'>
+            <input type = 'text' name = 'price' placeholder ='product price'>
+            <input type = 'text' name = 'size' placeholder ='product size'>
+            <button type = 'submit'>Submit</button>
+            </form>
+            `)
+            });
+output => : { title: 'shirt', price: '400', size: 'xl' } 
+
+Question 3 :  When the user clicks on submit parse both the input tags and show it in console
+output :      { title: 'shirt', price: '400'}
+
+Question 5 :  What is the use of extended attribute in body parser?
+Answer : It is going to read all the rich user object and array.
