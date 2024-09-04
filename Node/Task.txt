@@ -150,5 +150,10 @@ output => : { title: 'shirt', price: '400', size: 'xl' }
 Question 3 :  When the user clicks on submit parse both the input tags and show it in console
 output :      { title: 'shirt', price: '400'}
 
+Question 4 :  What is the difference between app.use and app.post/get?
+Answer :      app.get --> It is only for handling GET HTTP requests. 
+              app.post --> It is only for handling POST HTTP requests.
+              app.use --> It is generally used for introducing middlewares in your application and can handle all type of HTTP requests.
+
 Question 5 :  What is the use of extended attribute in body parser?
 Answer : It is going to read all the rich user object and array.
