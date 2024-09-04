@@ -92,3 +92,39 @@ const server = http.createServer((req, res) => {
    }
 })
 server.listen(3000)
+
+
+Date: 02/09/2024 
+Question 1 :  module not found in react, which type of error
+Answer : "module not found error" is an incorrect import path. (it is runtime error)
+
+
+Date: 03/09/2024 
+Question 1 : Why are we using Express JS ? Any reasons?
+Answer : It’s effectively a tool that simplifies building web applications and APIs using JavaScript on the server side. 
+         Express.js offers a robust set of features that enhance our productivity and streamline our web application. 
+         It makes it easier to organize our application’s functionality with middleware and routing.
+         It adds helpful utilities to Node HTTP objects and facilitates the rendering of dynamic HTTP objects
+
+Question 2 : What are middlewares ?
+Answer : Middleware are the just plain JavaScript function so this function are going to take a parameter as a callbacks so inside that call backs we are going to use a methods request response and next.
+
+Question 3 : What is next used for ?
+Answer : Next() is a middleware function that calls for the control of another middleware once the code is completed.
+         we can wait till the network operations are completed before you go to the next step
+        
+Question 4 : What is res.send used for?
+Answer : The res.send function is used to send a response in form of various types of data, such as strings, objects, arrays, or buffers, and automatically sets the appropriate Content-Type header based on the data type.
+
+Question 5 : If i do res.send('<h1> hello to node js </h1>') . What will be the content-type header equal to.
+Answer :    text/html
+
+Question 6 : If I do res.send( { key1: value }) . What will be the content-type header equal to.
+Answer :    application/json
+
+Question 7 : What does app.listen(3000) do behind the scenes ?
+Answer :    var http = require('http'); // require http
+            app.listen = function listen() {
+            var server = http.createServer(this);
+            return server.listen.apply(server, arguments);
+            };

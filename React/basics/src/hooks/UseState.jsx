@@ -37,3 +37,10 @@ const UseState = () => {
 }
 
 export default UseState
+
+
+/*
+    => Hooks should be cllaed always at top level.
+    => Hooks should not be used inside loops/conditions/functions.
+    => Hooks should be used only in functional components. 
+*/

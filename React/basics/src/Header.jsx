@@ -14,16 +14,19 @@ const Header = () => {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <Link class="nav-link" aria-current="page" to="/">About</Link>
+          <Link class="nav-link active" aria-current="page" to="/">About</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/usestate">useState</Link>
+          <Link class="nav-link active" to="/usestate">useState</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/useeffect">useEffect</Link>
+          <Link class="nav-link active" to="/useeffect">useEffect</Link>
         </li>
         <li class="nav-item">
-          <Link class="nav-link" to="/useeffectpagination">UseEffectPagination</Link>
+          <Link class="nav-link active" to="/useeffectpagination">UseEffectPagination</Link>
+        </li>
+        <li class="nav-item">
+          <Link class="nav-link active" to="/useref">useRef</Link>
         </li>
       </ul>
       <form class="d-flex" role="search">

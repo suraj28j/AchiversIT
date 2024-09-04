@@ -5,10 +5,10 @@ import { key } from './key'
 const UseEffectPagination = () => {
     const [user, setUser] = useState([])
     const [page, setPage] = useState(1)
-
+    
     useEffect(() => {
         getData()
-    }, [page]);
+    },[page]);
 
     let getData = async () => {
         let data = await fetch(`https://dummyapi.io/data/v1/user?page=${page}&limit=10`,

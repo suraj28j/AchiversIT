@@ -4,6 +4,7 @@ import AboutHooks from './hooks/AboutHooks'
 import UseState from './hooks/UseState'
 import UseEffect from './hooks/UseEffect'
 import UseEffectPagination from './hooks/UseEffectPagination'
+import UseRef from './hooks/UseRef'
 
 const Routing = () => {
   return (
@@ -13,6 +14,7 @@ const Routing = () => {
             <Route path='/usestate' element={<UseState/>} />
             <Route path='/useeffect' element={<UseEffect/>} />
             <Route path='/useeffectpagination' element={<UseEffectPagination/>}/>
+            <Route path='/useref' element={<UseRef/>}/>
         </Routes>
       
     </div>
