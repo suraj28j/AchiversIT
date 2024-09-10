@@ -134,4 +134,3 @@ function addToCart(id) {
     // })
 }
 
-
