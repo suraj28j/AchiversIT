@@ -1,18 +1,32 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const path = require('path')
 const adminRouter = require('./router/admin')
 const shopRouter = require('./router/shop')
+const {pageError} = require('./controller/product')
+
+app.set('view engine','ejs')
+app.set('views','views');
 
 app.use(bodyParser.urlencoded({extended:true}))
 
-app.use("/admin",adminRouter);
+// static file access
+app.use(express.static(path.join(__dirname,'public')))
+
+app.use("/admin",adminRouter.router);
 app.use(shopRouter);
 
-app.use((req,res,next)=>{
-    res.send("<h1>Page Not Found</h1>")
-})
+// --------------- //
+app.use(pageError)
+// --------------- //
+
 app.listen(3000);
+
+
+
+
+
 
 
 

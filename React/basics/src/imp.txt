@@ -1,0 +1,37 @@
+1. What is the startig file of React Application?
+2. Diffrence between npm and npx?
+3. What is VDOM?
+4. What are props?
+   4.1. What are keys in Lists?
+5. Write an syntax of class components and Explain with props?
+6. What is Life-cycle-methods in ReactJS Class Components?
+7. In mounting phase how methods will be executed?
+8. Explain about updating phase with example?
+9. What is the use of componentDidUpdate?
+10. What are the parameters you expect in componentDidUpdate?
+11. What are Hooks in ReactJS? Why hooks were introduced although React had Life-cycle in Class component?
+12. Write a code to Toggle the dark and light theme using useState hook.
+13. Write a code to demonstrate useState hook.
+14. What is JSX?
+15. What is the use of Render method in React Class component?
+16. What is state in ReactJS?
+17. Diffrence between state updating in class component and functional components?
+18. What are higher order components?
+19. Diffrence between class component and functional components?
+20. How to handle Lifecycle methods in Functional components?
+21. What happens when we do not pass any dependencies in useEffect hook? (Explain both when state changes and state not changes)
+22. How to define global state(variable) in ReactJS?
+23. What are the alternative we have for Context in ReactJS?
+24. What is props drilling?
+25. What is the use of useRef hook?
+26. What is Redux?
+27. 3 Rules od Redux?
+28. Building block of Redux?
+29. What is the use of Reducer function in Redux?
+30. What will combine Reducer do ?
+31. How to connect React components to Redux store?
+32. How to access the data from Redux store?
+33. What is udeDispatch hook will do?
+34. Why we need to use useParams hook?
+35. Use of BrowserRouter?
+36. What is the use of React fragment ?
