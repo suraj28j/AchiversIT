@@ -65,7 +65,7 @@ const Cart = () => {
             <h6 className='mt-4'>Cart Summary</h6>
             <hr />
             <p>Total Price :</p>
-            <h3>{totalPrice}</h3>
+            <h3>$ {totalPrice}</h3>
           </div>
         </div>
       </div>
