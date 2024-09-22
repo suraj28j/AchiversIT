@@ -30,7 +30,7 @@
 <body>
 
     <!-- Navbar Start -->
-    <div class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
         <div class="navbar-brand ms-4">
             <h2>Ecommerce</h2>
         </div>
@@ -41,7 +41,8 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a href="" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="./assets/html/product.html" class="nav-link active">Products</a></li>
-                <li class="nav-item"><a href="./assets/html/about.html" class="nav-link active" onclick="fiveProducts()">About</a></li>
+                <li class="nav-item"><a href="./assets/html/about.html" class="nav-link active"
+                        onclick="fiveProducts()">About</a></li>
                 <li class="nav-item"><a href="./assets/html/contact.html" class="nav-link active">Contact</a></li>
             </ul>
             <ul class="navbar-nav ms-auto me-4">
@@ -75,15 +76,15 @@
             <div class="col-md-6">
                 <nav class="nav nav-pills flex-column flex-md-row">
                     <button class="flex-sm-fill text-sm-center me-2 mt-1 btn btn-light border"
-                        onclick="allCollection()">All</button>
+                        onclick="filterData(`all`)">All</button>
                     <button class="flex-sm-fill text-sm-center me-2 mt-1 btn btn-light border"
-                        onclick="menCollection()">Men's Clothing</button>
+                        onclick="filterData(`men's clothing`)">Men's Clothing</button>
                     <button class="flex-sm-fill text-sm-center me-2 mt-1 btn btn-light border"
-                    onclick="womenCollection()">Women's Clothing</button>
+                        onclick="filterData(`women's clothing`)">Women's Clothing</button>
                     <button class="flex-sm-fill text-sm-center me-2 mt-1 btn btn-light border"
-                        onclick="JeweleryCollection()">Jewelary</button>
+                        onclick="filterData(`jewelery`)">Jewelary</button>
                     <button class="flex-sm-fill text-sm-center mt-1 btn btn-light border"
-                        onclick="electronicsCollection()">Electrinics</button>
+                        onclick="filterData(`electronics`)">Electrinics</button>
                 </nav>
             </div>
             <div class="col-md-3"></div>

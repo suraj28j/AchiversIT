@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <nav class="nav">
+        <li><a href="/admin/add-product">Add Product</a></li>
+      <li><a href="/">Shop</a></li>
+    </nav>
+    <main>
+      <% if(prods.length > 0 ) {%>
+      <div>
+        <% for (let product of prods) { %>
+        <article>
+          <header>
+            <h1><%= product.title %></h1>
+            <h2><%= product.id %></h2>
+          </header>
+          <div>
+            <img src="https://picsum.photos/200" alt="" />
+          </div>
+          <div class="">
+            <h2>Price: $99.99</h2>
+            <p>It's a Good mobile. You can buy it.</p>
+          </div>
+          <div class="">
+            <a href="/products/<%= product.id %>">
+              <button>Details</button>
+            </a>
+            <button>Add to cart</button>
+          </div>
+        </article>
+        <% }%>
+      </div>
+      <% } else { %>
+      <h1>No products</h1>
+      <% } %>
+    </main>
+  </body>
+</html>

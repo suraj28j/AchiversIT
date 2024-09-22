@@ -1,16 +1,24 @@
 const express = require('express');
+const adminRouters = require('./router/admin');
+const shopRouters = require('./router/shop');
+const path = require('path')
+const bodyParser = require('body-parser');
+const { errorController } = require('./controller/product');
 
 const app = express();
 
-app.use('/add-product',(req,res,next)=>{
-    res.send('<h2>Add-Product Page</h2>')
-    console.log('In Add-Product end point');
-});
+app.set('view engine','ejs');
+app.set('views','views');
 
-app.use('/',(req,res,next)=>{
-    console.log('In a second middleware function');
-    res.send('<h2>Hello from express server</h2>')
-})
+app.use(bodyParser.urlencoded({extended:true}))
+
+// static file access
+app.use(express.static(path.join(__dirname,'public')))
+
+app.use('/admin',adminRouters)
+app.use(shopRouters)
+
+app.use(errorController)
 
 app.listen(3000,()=>{
     console.log('server is running');
