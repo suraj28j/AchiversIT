@@ -6,6 +6,7 @@ import UseEffect from './hooks/UseEffect'
 import UseEffectPagination from './hooks/UseEffectPagination'
 import UseRef from './hooks/UseRef'
 import UseReducer from './hooks/UseReducer'
+import CompA from './hooks/useContext/CompA'
 
 const Routing = () => {
   return (
@@ -17,6 +18,7 @@ const Routing = () => {
             <Route path='/useeffectpagination' element={<UseEffectPagination/>}/>
             <Route path='/useref' element={<UseRef/>}/>
             <Route path='/usereducer' element={<UseReducer/>}/>
+            <Route path='/usecontext' element={<CompA/>}/>
         </Routes>
     </div>
   )

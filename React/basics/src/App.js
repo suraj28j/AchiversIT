@@ -16,6 +16,8 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Header from './Header';
 import Routing from './Routing';
 
+// import CompA from './hooks/useContext/CompA';
+
 function App() {
 
   // let user = {
@@ -44,6 +46,8 @@ function App() {
 
       <Header/>
       <Routing/>
+      
+      {/* <CompA name="React JS"/> */}
       
     </div>
   );
