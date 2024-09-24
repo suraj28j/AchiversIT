@@ -8,7 +8,7 @@ const dataPath = path.join(
 );
 
 module.exports = class Cart {
-    static addProduct(id,price) {
+    static addProduct(id, title, price) {
         fs.readFile(dataPath, (err, data) => {
             let cart = { products: [], cartTotalPrice: 0 };
             if (!err) {
@@ -28,12 +28,33 @@ module.exports = class Cart {
                 cart.products = [...cart.products]
                 cart.products[existProductIndex] = updatedProduct;
             } else {
-                updatedProduct = { id:id,price:price, qty:1 }
+                updatedProduct = { id: id, title: title, price: price, qty: 1 }
                 cart.products = [...cart.products, updatedProduct]
             }
-            fs.writeFile(dataPath,JSON.stringify(cart),(err)=>{
+            // ----------------------------------------------------------------------- //
+            let perItemPrice = cart.products.map((item) => {
+                return item.price * item.qty;
+            })
+            cart.cartTotalPrice = perItemPrice.reduce((acc, curr) => { return acc + curr }, 0)
+            // ----------------------------------------------------------------------- //
+
+            fs.writeFile(dataPath, JSON.stringify(cart), (err) => {
                 console.log(err);
             })
         })
     }
+
+
+    // ----------------------------------------------------------------------- //
+    static getProduct(cb) {
+        let cart;
+        fs.readFile(dataPath, (err, data) => {
+            if (!err) {
+                cart = JSON.parse(data)
+                cb(cart)
+                // console.log(cart);
+            }
+        })
+    }
+    // ----------------------------------------------------------------------- //
 }

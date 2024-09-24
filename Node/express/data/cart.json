@@ -1,1 +1,23 @@
-{"products":[{"id":[" 0.24417297761484225"," 99"],"qty":1}],"cartTotalPrice":0}
+{
+    "products": [
+        {
+            "id": " 0.24417297761484225",
+            "title": " Laptop",
+            "price": 99,
+            "qty": 7
+        },
+        {
+            "id": " 0.4112734597880574",
+            "title": " iPhone",
+            "price": 99,
+            "qty": 10
+        },
+        {
+            "id": " 0.9491961774021416",
+            "title": " Watch",
+            "price": 99,
+            "qty": 1
+        }
+    ],
+    "cartTotalPrice": 1782
+}

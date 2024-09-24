@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<nav class="nav">
+    <li><a href="/admin/add-product">Add Product</a></li>
+    <li><a href="/">Shop</a></li>
+</nav>
+
+<body>
+    <h2>My Cart</h2>
+    <h3>Total Price : <%=products.cartTotalPrice %>
+    </h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.products.forEach((item)=> { %>
+                <tr>
+                    <td>
+                        <%=item.title%>
+                    </td>
+                    <td>
+                        <%=item.price%>
+                    </td>
+                    <td>
+                        <%=item.qty%>
+                    </td>
+                </tr>
+
+                <% }); %>
+        </tbody>
+
+    </table>
+</body>
+
+</html>
