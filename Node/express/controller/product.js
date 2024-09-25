@@ -45,12 +45,23 @@ exports.errorController = (req, res, next) => {
   res.status(404).render("404", { pageTitle: 'Error Page 404' })
 }
 
+// exports.getProduct = (req, res, next) => {
+//   const id = req.params.productId;
+//   Product.findById(id, (product) => {
+//     res.render("product-details", {
+//       product: product,
+//     })
+//   })
+// }
+
 exports.getProduct = (req, res, next) => {
   const id = req.params.productId;
+  Product.find().then((product)=>{
 
-  Product.findById(id, (product) => {
+    const prod = product.find((item)=>item.id===id)
+    
     res.render("product-details", {
-      product: product,
+      product: prod,
     })
   })
 }
