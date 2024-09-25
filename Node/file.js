@@ -147,3 +147,34 @@ const fs = require('fs')
 //         console.log("rename directory successfully");
 //     }
 // })
+
+
+
+
+
+
+
+
+// --------------------------------------------------------- //
+// const user = {
+//     name:"Suraj",
+//     age:34
+// }
+
+// fs.writeFile('data.json',JSON.stringify(user),(err)=>{
+//     if(err){
+//         console.log(err,'Error Occured');
+//     }else{
+//         console.log("File Write Successfully")
+//     }
+// });
+
+// fs.readFile('data.json',(err,data)=>{
+//     if(err){
+//         console.log("Error ",err);
+//     }else{
+//         console.log(JSON.parse(data));
+//     }
+// })
+
+// --------------------------------------------------------- //
