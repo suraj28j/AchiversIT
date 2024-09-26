@@ -118,3 +118,53 @@
 // myElectricCar.stratEngine();
 // myElectricCar.stopEngine();
 // myElectricCar.chargeCapacity();
+
+
+// Getter and Setter methods
+
+// Example (1)
+// class Circle {
+//     constructor(radius) {
+//         this._radius = radius
+//     }
+//     get getRadius() {
+//         return this._radius;
+//     }
+//     set setRadius(value) {
+//         if (value <= 0) {
+//             throw new Error("Radius must be positive number");
+//         }
+//         this._radius = value
+//     }
+// }
+
+// const result = new Circle(5);
+// console.log(result.getRadius);
+// result.setRadius = 10;
+// console.log(result.getRadius);
+
+// Example (2)
+// class User {
+//     constructor(username, password) {
+//         this._username = username;
+//         this._password = password;
+//     }
+//     get getUsername() {
+//         return this._username
+//     }
+//     set setPassword(pwd) {
+//         if (newPassword.length >= 6) {
+//             throw new Error("Password must be atleast 6 characters");
+//         }
+//         this._password = pwd
+//     }
+//     checkPassword(inputPassword) {
+//         return this._password === inputPassword
+//     }
+// }
+
+// const user = new User('Suraj', '123abcd')
+// console.log(user.getUsername);
+// user.setPassword = '456abcd'
+// console.log(user.checkPassword('123abcd'));
+// user.checkPassword('456abc')
