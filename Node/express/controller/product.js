@@ -56,34 +56,62 @@ exports.errorController = (req, res, next) => {
 
 exports.getProduct = (req, res, next) => {
   const id = req.params.productId;
-  Product.find().then((product)=>{
-
-    const prod = product.find((item)=>item.id===id)
-    
+  Product.find().then((product) => {
+    const prod = product.find((item) => item.id === id)
     res.render("product-details", {
       product: prod,
     })
   })
 }
 
+
+
+
+// exports.postCart = (req, res, next) => {
+//   const prodId = req.body.productId;
+//   const prodPrice = req.body.productPrice;
+//   const prodTitle = req.body.productTitle;
+//   Product.findById(prodId, (product) => {
+//     Cart.addProduct(prodId, prodTitle, Number(prodPrice))
+//   });
+//   // res.redirect("/");
+//   res.redirect("/cartdata");
+// }
+
+
+////----------------------------------
 exports.postCart = (req, res, next) => {
-  const prodId = req.body.productId;
-  const prodPrice = req.body.productPrice;
-  const prodTitle = req.body.productTitle;
-  Product.findById(prodId, (product) => {
-    Cart.addProduct(prodId, prodTitle, Number(prodPrice))
-  });
-  // res.redirect("/");
+  const prodId = (req.body.productId).trim();
+  Product.find()
+    .then((product) => {
+      const prod = product.find((item) => (item._id).toString() === `${prodId}`)
+      console.log(prod);
+      let cart = new Cart({ title: prod.title })
+      cart.save()
+        .then((result) => {
+          console.log('Cart product saved to DB successfully')
+        })
+        .catch((error) => console.log(error))
+    });
   res.redirect("/cartdata");
 }
 
 // --------------------------------------------- //
+// exports.cartData = (req, res, next) => {
+// Cart.getProduct((products) => {
+//   console.log('Products :- ', products);
+//   res.render('cart.ejs', {
+//     products: products
+//   });
+// })
+// }
+// --------------------------------------------- //
+
 exports.cartData = (req, res, next) => {
-  Cart.getProduct((products) => {
-    console.log('Products :- ', products);
-    res.render('cart.ejs', {
-      products: products
-    });
+  Cart
+  .find()
+  .then((products) => {
+    // console.log("Products : ",products);
+    res.render('cart', { pageTitle: 'Cart Page', products: products })
   })
 }
-// --------------------------------------------- //

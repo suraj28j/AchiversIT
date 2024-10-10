@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title><%=pageTitle%></title>
     <link rel="stylesheet" href="/css/main.css" />
     <style>
         table,
@@ -22,7 +22,7 @@
 
 <body>
     <h2>My Cart</h2>
-    <h3>Total Price : <%=products.cartTotalPrice %>
+    <!-- <h3>Total Price : <%=products.cartTotalPrice %> -->
     </h3>
     <table>
         <thead>
@@ -33,17 +33,17 @@
             </tr>
         </thead>
         <tbody>
-            <% products.products.forEach((item)=> { %>
+            <% products.forEach((item)=> { %>
                 <tr>
                     <td>
                         <%=item.title%>
                     </td>
                     <td>
-                        <%=item.price%>
+                        <%=item._id%>
                     </td>
-                    <td>
+                    <!-- <td>
                         <%=item.qty%>
-                    </td>
+                    </td> -->
                 </tr>
 
                 <% }); %>

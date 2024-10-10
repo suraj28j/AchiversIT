@@ -2,7 +2,7 @@ let cartData = [];
 function displayCartItems(){
     cartData = JSON.parse(sessionStorage.getItem('products'))
 
-    // console.log(cartData);
+    console.log(cartData);
     // cartData.forEach((element,index) => {
     //     let div8 = document.createElement('div')
     //     div8.setAttribute('class','col-md-9')

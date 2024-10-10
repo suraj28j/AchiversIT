@@ -58,40 +58,29 @@ function filterData(category) {
 
 
 // Add to cart
-function addToCart(id) {
-    let prvData = [];
-
+function addToCart(id) { 
+    let prvData = sessionStorage.getItem("products")
+    
+    if(prvData !== null){
+        cartData.push(JSON.parse(prvData))
+    }
+    
     let getItem = products.find((item) => {
         return item.id === id;
     })
-
-    cartData.push(JSON.parse(sessionStorage.getItem('products')));
-
-    if (cartData == []) {
-        cartData.push(getItem);
-        let jsonData = JSON.stringify(prvData)
-        sessionStorage.setItem(`products`, `${jsonData}`)
+    let existProduct = cartData.find((item)=>{
+        return item.id === getItem.id
+    })
+    if(existProduct){
+    existProduct.quantity = existProduct.quantity+1;
+    }else{
+        existProduct.quantity = 1;
     }
-}
-console.log(cartData);
 
-    // if(prvData){
-    //     let checkItem = prvData.find((item) => {
-    //         return item.id === getItem.id
-    //     })
-    //     if (checkItem) {
-    //         checkItem.quantity = checkItem.quantity + 1;
-    //         // let jsonData = JSON.stringify(prvData)
-    //         // sessionStorage.setItem(`products`,`${jsonData}`)
-    //     } else {
-    //         getItem.quantity = 1;
-    //         prvData.push(getItem)
-        //     let jsonData = JSON.stringify(prvData)
-        //     sessionStorage.setItem(`products`,`${jsonData}`)
-        // }
-    // }else{
-    //     let jsonData = JSON.stringify(getItem)
-    //         sessionStorage.setItem(`products`,`${jsonData}`)
-    // }
-// }
+    cartData = [...cartData,existProduct];
+    sessionStorage.setItem("products",JSON.stringify(cartData));
+}
+
+    
+
 
