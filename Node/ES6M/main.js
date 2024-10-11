@@ -13,4 +13,4 @@
    import student from  './aboutme.js'
    console.log(student);
    
-// default 'type' in Node JS is 'module'
+// default 'type' in Node JS is 'CommonJS'

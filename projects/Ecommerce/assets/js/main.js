@@ -58,29 +58,32 @@ function filterData(category) {
 
 
 // Add to cart
-function addToCart(id) { 
+function addToCart(id) {
     let prvData = sessionStorage.getItem("products")
-    
-    if(prvData !== null){
-        cartData.push(JSON.parse(prvData))
-    }
-    
+
     let getItem = products.find((item) => {
         return item.id === id;
     })
-    let existProduct = cartData.find((item)=>{
-        return item.id === getItem.id
-    })
-    if(existProduct){
-    existProduct.quantity = existProduct.quantity+1;
-    }else{
-        existProduct.quantity = 1;
-    }
 
-    cartData = [...cartData,existProduct];
-    sessionStorage.setItem("products",JSON.stringify(cartData));
+    if (prvData !== null) {
+        cartData = [...JSON.parse(prvData)];
+        let existProduct = cartData.find((item) => {
+            return item.id === getItem.id
+        })
+        if (existProduct) {
+            existProduct.quantity = existProduct.quantity + 1;
+        } else {
+            getItem.quantity = 1;
+            cartData.push(getItem)
+        }
+
+    } else {
+        getItem.quantity = 1;
+        cartData.push(getItem);
+    }
+    sessionStorage.setItem("products", JSON.stringify(cartData));
 }
 
-    
+
 
 
