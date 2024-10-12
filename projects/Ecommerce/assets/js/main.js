@@ -3,22 +3,28 @@ let products;
 let productsByCategory;
 
 async function getProducts() {
-    const getData = await fetch(`https://fakestoreapi.com/products`);
-    products = await getData.json();
-    // console.log(products);
-    productsByCategory = products;
-    displayData()
+    try {
+        const getData = await fetch(`https://fakestoreapi.com/products`);
+        products = await getData.json();
+        // console.log(products);
+        productsByCategory = products;
+    } catch (error) {
+        console.log("ERROR : ", error);
+        console.log("products : ", products);
+    }
+    displayData();
 }
 getProducts();
 
 
 function displayData() {
     const productsContiner = document.getElementById('productsContainer');
-    productsContiner.innerHTML = '';
-    productsByCategory.forEach((item, index) => {
-        const col = document.createElement('div');
-        col.setAttribute('class', 'col-md-4');
-        col.innerHTML = `
+    if (products !== undefined) {
+        productsContiner.innerHTML = '';
+        productsByCategory.forEach((item, index) => {
+            const col = document.createElement('div');
+            col.setAttribute('class', 'col-md-4');
+            col.innerHTML = `
         <div class='card g-2'>
             <div class = 'card-body'>
                 <div class='d-flex justify-content-center mt-2'>
@@ -34,14 +40,17 @@ function displayData() {
                     <p>$ ${item.price}</p>
                 <div>
                 <div class='d-flex justify-content-center'>
-                    <button class = "btn btn-dark">Details</button>
-                    <button class = "btn btn-dark ms-2" onclick="addToCart(${item.id})">Add to Cart</button>
+                    <button class = "btn btn-dark" onclick = "setDeatils(${item.id})">Details</button>
+                    <button class = "btn btn-dark ms-2" onclick = "addToCart(${item.id})">Add to Cart</button>
                 </div>
             </div>
         </div>
         `
-        productsContiner.appendChild(col);
-    })
+            productsContiner.appendChild(col);
+        })
+    }else{
+        productsContiner.innerHTML = `<h3 id = 'errormsg'>Can't Fetch Data</h3>`
+    }
 }
 
 function filterData(category) {
@@ -82,6 +91,16 @@ function addToCart(id) {
         cartData.push(getItem);
     }
     sessionStorage.setItem("products", JSON.stringify(cartData));
+}
+
+function setDeatils(id) {
+    sessionStorage.removeItem("product")
+    let product = products.find((item) => {
+        return item.id === id
+    })
+    console.log(product);
+    sessionStorage.setItem("product", JSON.stringify(product));
+    window.location.href = './assets/html/product.html'
 }
 
 
