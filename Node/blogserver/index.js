@@ -5,6 +5,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoute from './routes/auth.js'
 import blogRoute from './routes/blog.js'
+import userRoute from './routes/user.js'
 
 dotenv.config()
 const app = express()
@@ -35,8 +36,8 @@ const connectDB = async () => {
 // Method-2 //
 const corsOptions = {
     // origin:["http://localhost:3000","http://localhost:4000"],
-    origin:true,
-    credentials:true
+    origin: true,
+    credentials: true
 }
 
 app.use(cors(corsOptions));
@@ -46,6 +47,7 @@ app.use(cookieParser())
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/blog", blogRoute);
+app.use("/api/v1/user", userRoute);
 
 connectDB()
     .then(() => {
