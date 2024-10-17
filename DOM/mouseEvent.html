@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 200px;
+            /* margin-top: 10px; */
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="eventHandler('red','onclick',0)"></div>
+        <div class="box" ondblclick="eventHandler('yellow','ondbclick',1)"></div>
+        <div class="box" onmouseover = "eventHandler('red','onmouseover',2)" onmouseout = "eventHandler('orange','onmouseout',2)" ></div>
+        <div class="box" onmouseup = "eventHandler('lightgreen','onmouseup',3)" onmousedown = "eventHandler('orange','onmousedown',3)" ></div>
+        <div class="box" onmousemove = "mouseMove(this)"></div>
+    </div>
+   
+
+    <script>
+        function eventHandler(color,event,index){
+            document.getElementsByClassName('box')[index].style.backgroundColor=`${color}`;
+            document.getElementsByClassName('box')[index].innerText = `${event}`
+        }
+
+        function mouseMove(x){
+            x.innerText =  "mousemove "+(Math.random()*10).toFixed(2);
+        }
+    </script>
+</body>
+</html>

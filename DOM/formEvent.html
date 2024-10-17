@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Event</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 100px;
+            border: 1px solid;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Events :- Onfocus, Onblur, Oninput and Onchange</h2>
+    <form>
+        <label for="name">Name : </label>
+        <input type="text" id="name" name="name" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninput="inputValue(this)"><br><br>
+
+        <label for="age">Age : </label>
+        <input type="text" id="age" name="age" onfocus="focusFunction(this)" onblur="blurFunction(this)" onchange="ChangeFunction(this)">
+
+        <div id="box"></div>
+    </form>
+
+    <script>
+        function focusFunction(element){
+            element.style.backgroundColor='green';
+            element.style.outline = '2px solid red';
+        }
+
+        function blurFunction(element){
+            element.style.backgroundColor='red';
+            element.style.outline = '1px solid black';
+        }
+
+        function inputValue(element){
+            let val = element.value;
+            document.getElementById("box").innerText = val;
+            
+        }
+
+        // oninput and and onchange events working similer
+        // onchange event occer when focus is change but oninput event oaccer any input enter
+        function ChangeFunction(element){
+            let val = element.value;
+            document.getElementById("box").innerText = val;
+        }
+    </script>
+</body>
+</html>
