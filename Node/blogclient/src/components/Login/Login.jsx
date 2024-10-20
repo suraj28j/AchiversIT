@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BASE_URL } from '../../utils/config'
+import { AuthContext } from '../../context/AuthContext';
 import { toast } from 'react-toastify';
 
 const Login = () => {
@@ -9,12 +10,17 @@ const Login = () => {
         password: undefined
     })
 
+    const { dispatch } = useContext(AuthContext)
+
     const handleChange = (e) => {
         setCredentials((preV) => ({ ...preV, [e.target.id]: e.target.value }))
         // console.log(credentials);
     }
     const handleClick = async (e) => {
         e.preventDefault();
+
+        dispatch({ type: "LOGIN_START" });
+
         try {
             const res = await fetch(`${BASE_URL}/auth/login`, {
                 method: "POST",
@@ -24,6 +30,12 @@ const Login = () => {
             });
             const result = await res.json();
             console.log(result);
+            dispatch({
+                type: "LOGIN_SUCCESS",
+                payload: result.data,
+                token: result.token,
+                role: result.role
+            })
             if (result.success === true) {
                 toast.success(result.message);
             } else {
@@ -31,6 +43,10 @@ const Login = () => {
             }
         } catch (error) {
             console.log("Error:message");
+            dispatch({
+                type: "LOGIN_FAILURE",
+                payload: error.message
+            })
         }
     }
     return (
