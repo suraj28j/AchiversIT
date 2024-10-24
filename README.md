@@ -1,4 +1,5 @@
 # AchiversIT
+> Batch 22/04/2024
 
 ## (Java Script Practices)[https://github.com/suraj28j/AchiversIT/tree/main/JavaScript_Projects] 
 
@@ -17,5 +18,3 @@
 - Ecommecre (API)
 - Mart Ecommerce
 
-
-> Batch 22/04/2024
