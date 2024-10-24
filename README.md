@@ -1,18 +1,24 @@
 # AchiversIT
 
-## Java Script Notes
+## Java Script Practices 
 
-## Projects
+------------------------
 
-AchiversIT WebClone
+## Java Script Projects
 
-Fila
+- Add to Cart
+- StickyNote
+- Library Management System
+- Bank Statement
+- Weather API
+- Ecommerce Site (API)
+------------------------
 
-Sticky Note
+## React Projects
 
-Weather api
-
-Library Management System
-
+- Basics
+- Ecommecre (API)
+- Mart E-commerce
+------------------------
 
 > Batch 22/04/2024
