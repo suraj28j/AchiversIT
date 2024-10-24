@@ -1,36 +1,41 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
 }
-.container{
+
+.container {
     margin-left: 15%;
     margin-right: 15%;
     height: 100%;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
-    margin:2%;
+    margin: 2%;
     background-color: goldenrod;
     border-radius: 5px;
 }
-nav img{
+
+nav img {
     width: 100px;
     height: 80px;
 }
-.cart{
+
+.cart {
     width: 80px;
     height: 40px;
     display: flex;
     justify-content: space-between;
     background-color: white;
-    margin:2%;
+    margin: 2%;
     border-radius: 2px;
     line-height: 40px;
 }
-.cart p{
+
+.cart p {
     width: 30px;
     height: 30px;
     color: white;
@@ -41,22 +46,25 @@ nav img{
     line-height: 30px;
     font-size: 25px;
 }
-.cart i{
+
+.cart i {
     font-size: 20px;
     margin-left: 5px;
 }
 
-main{
+main {
     display: flex;
     margin: 2%;
 }
-.items{
+
+.items {
     width: 700px;
     height: 700px;
     display: grid;
-    grid-template-columns: repeat(2,auto);
+    grid-template-columns: repeat(2, auto);
 }
-#items-cart{
+
+#items-cart {
     width: 320px;
     height: 680px;
     margin-top: 5px;
@@ -66,7 +74,8 @@ main{
     flex-direction: column;
     align-items: center;
 }
-.items div{
+
+.items div {
     width: 300px;
     height: 330px;
     border: 2px solid goldenrod;
@@ -74,32 +83,45 @@ main{
     text-align: center;
     border-radius: 5px;
 }
-.items div img{
+
+.items div img {
     width: 150px;
     height: 150px;
     margin-top: 10px;
 }
-.items button{
+
+.items button {
     width: 250px;
     height: 40px;
     background-color: goldenrod;
     border-radius: 10px;
 }
-.items img,.items h2,.items h3,.items button{
+
+.items button:hover {
+    cursor: pointer;
+}
+
+.items img,
+.items h2,
+.items h3,
+.items button {
     margin-top: 20px;
 }
-#myCart{
+
+#myCart {
     width: 300px;
     height: 50px;
     background-color: goldenrod;
     margin-top: 10px;
 }
-#myCart h3{
+
+#myCart h3 {
     color: white;
     line-height: 50px;
     margin-left: 10px;
 }
-#box{
+
+#box {
     width: 300px;
     height: 60px;
     display: flex;
@@ -108,34 +130,40 @@ main{
     margin-top: 10px;
     background-color: white;
 }
-#box img{
+
+#box img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 2px solid goldenrod;
     padding: 3px;
 }
-#box i{
+
+#box i {
     display: block;
 }
-hr{
+
+hr {
     /* border: 1px solid; */
     width: 300px;
     margin-top: 10px;
 }
-#cost{
+
+#cost {
     display: flex;
     align-items: initial;
     justify-content: space-between;
 }
-#cost h2:first-child{
+
+#cost h2:first-child {
     margin-left: 0px;
 }
-#cost h2:last-child{
+
+#cost h2:last-child {
     margin-left: 180px;
     color: red;
 }
-.bi-trash3{
+
+.bi-trash3 {
     cursor: pointer
 }
-
