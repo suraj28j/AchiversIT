@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../img/logo.png'
+import { AuthContext } from '../../context/AuthContext'
 
 const Header = () => {
+    const { user, dispatch } = useContext(AuthContext);
+
+    const logoutHandler = (e) => {
+        e.preventDefault()
+        dispatch({ type: "LOGOUT" })
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -16,11 +23,29 @@ const Header = () => {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/" >Home</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/createblog">Create Blog</Link>
+                            </li>
                         </ul>
                         <form className="d-flex" role="search">
-                            <Link to='/login'>
-                                <button className="btn btn-outline-success" type="submit">Login</button>
-                            </Link>
+                            {
+                                user ? (
+                                    <>
+                                        <Link to = {`/updateuser/${user._id}`}>
+                                            <button className='btn me-2'>{user.name}</button>
+                                        </Link>
+                                        <button className="btn btn-outline-danger" type="submit" onClick={logoutHandler}>
+                                            <Link className="nav-link active" aria-current="page" to='/'>Logout</Link>
+                                        </button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <button className="btn btn-outline-success" type="submit">
+                                            <Link className="nav-link active" aria-current="page" to='/login'>Login</Link>
+                                        </button>
+                                    </>
+                                )
+                            }
                         </form>
                     </div>
                 </div>

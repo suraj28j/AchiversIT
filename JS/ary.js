@@ -1,5 +1,5 @@
 let ary1 = [19,35,24,29,16,45,8,13];
-let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
+let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Rohit","Ravindra",];
 // Suraj
 
 // sort() //
@@ -16,7 +16,7 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // console.log(ary1.reverse());
 // console.log(ary2.reverse());
 
-// pop() //
+// pop() // => The removed (last) element from the array; undefined if the array is empty.
 // ary1.pop();
 // console.log(ary1); 
 // console.log(ary1.pop()); // 13
@@ -38,10 +38,9 @@ let ary2 = ["Virat","Rohit","Rahul","Hardik","Jasprit","Ravindra"];
 // console.log(ary2.unshift()); // total elements 6
 // console.log(ary2.unshift("Dhoni"));  // total elements 6+1 = 7
 
-// join() //
+// join(separator) //
 // console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string 
-console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string 
-// console.log(ary2.join(" ")); // return a string 
+// console.log(ary2.join(" ")); // return a string  => Virat Rohit Rahul Hardik Jasprit Rohit Ravindra
 
 // slice() //
 // console.log(ary1.slice(1,3));
@@ -67,26 +66,35 @@ console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string
 // })
 // console.log(player);
 
-// indexOf() //
+// indexOf(searchElement,fromIndex) //
 // console.log(ary2.indexOf("Rohit"));
+// console.log(ary2.indexOf("Rohit",2));
 
-// lastIndexOf() //
-// console.log([2,7,5,2,9,4,2,1].lastIndexOf(2));
+// lastIndexOf(searchElement, fromIndex) //
+// console.log([2,7,5,2,9,4,2,1].lastIndexOf(2)); // 6
 
-// Include() //
+// includes(searchElement, fromIndex) //
 // console.log(ary2.includes("Dhoni"));
 
-// find() //
+// find(callbackFn, thisArg) //
 // let res = ary1.find((num)=>{
 //     return num>20;
 // })
 // console.log(res);
 
-// findIndex() //
+// findIndex(callbackFn, thisArg) //
 // let res = ary1.findIndex((num)=>{
 //     return num>20;
 // })
 // console.log(res);
+
+// findLast(callbackFn, thisArg)
+// let value = [24,34,18,25,17].findLast((val)=>val>18)
+// console.log(value); // 25
+
+// findLastIndex(callbackFn, thisArg)
+// let value = [24,34,18,25,17].findLast((val)=>val>18)
+// console.log(value); // 3
 
 // some() //
 // let res = ary1.some((num)=>{
@@ -94,13 +102,13 @@ console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string
 // })
 // console.log(res);
 
-// filer() //
+// filer(callbackFn, thisArg) //
 // let res = ary1.filter((num)=>{
 //     return num>30;
 // })
 // console.log(res);
 
-// every() //
+// every(callbackFn, thisArg) //
 // let res = ary1.every((num)=>{
 //     return num>7;
 // })
@@ -121,10 +129,10 @@ console.log(ary1.join()); // 19,35,24,29,16,45,8,13  // return a string
 //     console.log(element);
 // }
 
-// fill() //
+// fill(value, start, end) //
 // console.log(ary2.fill("Suraj"));
 
-// reduce() //
+// reduce(callbackFn, initialValue) //
 // let res = ary1.reduce((acc,cuur)=> acc+cuur,0);
 // console.log(res);
 

@@ -36,14 +36,14 @@ export const editBlog = async (req, res, next) => {
   const userId = req.userId;
 
   try {
-    const blog = await Blog.findById(userId);
+    const blog = await Blog.findById(blogId);
 
     if (!blog) {
       return res.status(404).json({ success: false, message: "Blog not found" })
     }
 
-    console.log("blog.user.id", blog.user.id);
-    console.log("userId", userId);
+    // console.log("blog.user.id", blog.user.id);
+    // console.log("userId", userId);
 
     if (blog.user.id.toString() !== userId.toString()) {
       return res.status(403).json({ success: false, message: "Unauthorizd: You can't edit this blog" })
