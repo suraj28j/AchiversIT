@@ -2,7 +2,6 @@
 
 ## Java Script Practices 
 
-
 ## Java Script Projects
 
 - Add to Cart
@@ -16,6 +15,7 @@
 
 - Basics
 - Ecommecre (API)
-- Mart E-commerce
+- Mart Ecommerce
+
 
 > Batch 22/04/2024
