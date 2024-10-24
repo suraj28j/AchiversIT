@@ -2,7 +2,6 @@
 
 ## Java Script Practices 
 
-------------------------
 
 ## Java Script Projects
 
@@ -12,13 +11,11 @@
 - Bank Statement
 - Weather API
 - Ecommerce Site (API)
-------------------------
 
 ## React Projects
 
 - Basics
 - Ecommecre (API)
 - Mart E-commerce
-------------------------
 
 > Batch 22/04/2024
