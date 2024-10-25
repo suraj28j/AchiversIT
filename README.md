@@ -9,6 +9,7 @@
 - Sticky Note
 - Library Management System
 - Bank Statement
+- Simple Calculator
 - Weather API
 - Ecommerce Site (API)
 
