@@ -11,15 +11,16 @@
 - Bank Statement
 - Weather API
 - Ecommerce Site (API)
-- Blog Client
 
 ## React Projects
 
 - Basics
 - Ecommecre (API)
 - Mart Ecommerce
+- Blog Client
 
 ## Node JS
 
+- Group Chat
 - Blog Server
 
