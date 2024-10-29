@@ -1,0 +1,251 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: roboto;
+}
+:root{
+    --bg-color1:#313131;
+    --bg-color2:#000000;
+    --bg-color3:#FFFFFF;
+    --bg-color4:#FA6626;
+    --bg-color5:#fff8ec;
+    --bg-color6:#ece0e6;
+    --bg-color7:#242121d7;
+    --text-color1:#FFFFFF;
+    --text-color2:#FA6626;
+    --text-color3:#000000;
+}
+@font-face {
+    font-family: roboto;
+    src: url(../font/roboto/Roboto-Regular.ttf);
+}
+
+/* Header Styling */
+header{
+    text-align: center;
+    background-color:var(--bg-color1);
+    /* position: fixed; */
+    width: 100%;
+}
+header nav{
+    min-height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header h2{
+    font-size: 25px;
+}
+header ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 500px;
+}
+#contact{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--bg-color3);
+    color: var(--text-color3);
+    cursor:pointer;
+}
+#contact:hover{
+    background-color: var(--bg-color4);
+    color: var(--text-color1);
+}
+header a{
+    color: var(--text-color1);
+}
+header h2:hover a{
+    color: var(--text-color2);
+}
+header li:hover a{
+    text-decoration: underline;
+    color: var(--text-color2);
+}
+header section:hover{
+    background-color: var(--text-color2);
+    color: var(--text-color1);
+}
+header nav i{
+    display: none;
+    color: var(--text-color1);
+    font-size: 20px;
+}
+
+/* Main Styling Start*/
+
+/* Portfolio */
+#portfolio{
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color:var(--bg-color5)
+}
+#portfolio section:first-child{
+    margin: 0 10% 0 5%;
+}
+#portfolio section:nth-child(2){
+    margin: 0 10% 0 1%;
+}
+#portfolio img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px var(--bg-color1);
+}
+#portfolio h2,#portfolio p,#portfolio button{
+    margin-top: 10px;
+}
+#portfolio section h2:nth-child(2),#portfolio section h2:nth-child(3){
+    font-size: 35px;
+}
+#portfolio span{
+    color: var(--text-color2);
+}
+#portfolio button{
+    width: 80px;
+    height: 40px;
+    cursor:grab;
+}
+
+/* aboutme */
+#aboutme{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--bg-color7);
+}
+#aboutme section:first-child{
+    margin: 0% 10%;
+}
+#aboutme section:nth-child(2){
+    margin: 0 15% 0 1%;
+}
+#aboutme img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+#aboutme button{
+    width: 80px;
+    height: 40px;
+    cursor:grab;
+}
+#aboutme section h2:nth-child(1),#aboutme section h2:nth-child(2),#aboutme section p{
+    color: var(--text-color1);
+    /* font-size: 20px; */
+}
+#aboutme h2,#aboutme p,#aboutme button{
+    margin-top: 15px;
+}
+
+
+/* Contact Me */
+
+#contactme {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid; */
+    margin: 2% 35% 0 35%;
+    text-align: center;
+}
+#contactme input{
+    width: 400px;
+    padding: 15px;
+    background-color: var(--bg-color6);
+    margin-top: 2%;
+}
+#contactme button{
+    width: 100px;
+    height: 40px;
+    margin-top: 2%;
+}
+
+/* Main Styling End*/
+
+
+/* Media query*/
+@media screen and (max-width:768px){
+    header ul{
+        width: 400px;
+    }
+    #portfolio{
+        flex-direction: column;
+        height: auto;
+    }
+    #portfolio section:first-child{
+        margin: 2% 5% ;
+    }
+    #portfolio section:last-child{
+        margin: 2% 20% ;
+    }
+
+    #aboutme{
+        flex-direction: column;
+        height: auto;
+    }
+    #aboutme section:first-child{
+        margin: 15% 30% 0 30%  ;
+    }
+    #aboutme section:last-child{
+        margin: 2% 5% ;
+    }
+}
+
+@media screen and (max-width:426px){
+    header ul{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        display: none;
+        position: absolute;
+        top: 60px;
+        background-color: var(--bg-color1);
+    }
+    header ul li{
+        padding: 10px;
+    }
+    #contact{
+        display: none;
+    }
+    header nav i{
+        display: block;
+    }
+    #contactme section{
+        margin: 2%;
+    }
+
+    #aboutme section:first-child{
+        margin: 15% 20% 0 20%  ;
+    }
+   
+}
+
+@media screen and (max-width:376px){
+    header nav{
+        min-height: 40px;
+    }
+    header ul{
+        top: 40px;
+    }
+    #portfolio button{
+        width: 75px;
+        height: 30px;
+    }
+    #aboutme button{
+        width: 75px;
+        height: 30px;
+    }
+    #contactme input{
+        width: 300px;
+    }
+}

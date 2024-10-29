@@ -22,12 +22,13 @@ const SingleBlog = () => {
                     <h4>{blog.title}</h4>
                     <p>{blog.content}</p>
                     <Link to={`/updateblog/${id}`}>
-                    <button className='btn btn-dark mt-2'>Update Blog</button>
+                        <button className='btn btn-dark mt-2'>Update Blog</button>
                     </Link>
+
                 </div>
                 <div className='col-md-4'></div>
             </div>
-            
+
         </div>
     )
 }
