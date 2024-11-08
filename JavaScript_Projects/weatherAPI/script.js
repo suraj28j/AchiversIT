@@ -6,7 +6,7 @@ async function checkWeather() {
     let windspeed = document.getElementById("windspeed");
     let img = document.getElementById("img");
 
-    let key = '433277b3a45785d10cf4a7e6ec1cf169';
+    let key = '';
     let api_url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}`
     let data = await fetch(api_url).then(response => {
         if (!response.ok) {
