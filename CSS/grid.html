@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            justify-self: center;
+        }
+
+        .container1 {
+            width: 924px; 
+            display: grid;
+
+            /* grid-template-columns: 300px 300px 300px; */
+            /* grid-template-columns:repeat(3,300px); */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* grid-template-rows: 150px 150px 150px; */
+            grid-template-rows: repeat(3,150px);
+
+              /* grid-column-gap:10px;
+            grid-row-gap: 10px; */
+            grid-gap: 10px;
+
+            background-color: rgb(184, 192, 175);
+            text-align: center;
+            line-height:150px;
+            border: 2px solid;
+            margin: 20px 0px;
+        }
+
+        #div1 {
+            background-color: red;
+        }
+
+        #div2 {
+            background-color: green;
+        }
+
+        #div3 {
+            background-color: blue;
+        }
+
+        #div4 {
+            background-color: olivedrab;
+        }
+
+        #div5 {
+            background-color: rebeccapurple;
+        }
+
+        #div6 {
+            background-color: gold;
+        }
+
+        #div7 {
+            background-color: tomato;
+        }
+
+        #div8 {
+            background-color: fuchsia;
+        }
+
+        #div9 {
+            background-color: rgb(59, 104, 152);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <div id="div1">Item 1</div>
+        <div id="div2">Item 2</div>
+        <div id="div3">Item 3</div>
+        <div id="div4">Item 4</div>
+        <div id="div5">Item 5</div>
+        <div id="div6">Item 6</div>
+        <div id="div7">Item 7</div>
+        <div id="div8">Item 8</div>
+        <div id="div9">Item 9</div>
+    </div>
+
+    <hr>
+
+</body>
+
+</html>
