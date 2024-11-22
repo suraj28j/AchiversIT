@@ -1,5 +1,4 @@
 # AchiversIT
-> Batch 22/04/2024
 
 ## Java Script Practices
 
