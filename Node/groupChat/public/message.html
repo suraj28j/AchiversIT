@@ -57,14 +57,16 @@
             // console.log(credential);
 
             try {
-                await fetch('/message', {
+                let res = await fetch('/message', {
                     method: "POST",
                     headers: { "Content-type": 'application/json' },
                     body: JSON.stringify({username,message})
                 })
+                // let result = await res.json();
+                console.log("info : ",res)
                 
             } catch (error) {
-                console.log(error);
+                console.log("Error : ",error);
             }
         })
     </script>

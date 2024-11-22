@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flex</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            min-height: 150px;
+            border: 1px solid;
+            background-color: antiquewhite;
+            display: flex;
+            text-align: center;
+            line-height: 150px;
+            /* flex-direction: column;  */
+            /* flex-direction (default value) - row */
+
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+        }
+
+        .container div {
+            min-width: 300px;
+        }
+
+        #div1 {
+            background-color: brown;
+        }
+
+        #div2 {
+            background-color: chartreuse;
+        }
+
+        #div3 {
+            background-color: blue;
+        }
+
+        #div4 {
+            background-color: darkgoldenrod;
+        }
+
+
+        .rose{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            margin-top: 5rem;
+
+        }
+        .rose div{
+            width: 20rem;
+        }
+        .rose img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div id="div1">Item 1</div>
+        <div id="div2">Item 2</div>
+        <div id="div3">Item 3</div>
+        <div id="div4">Item 4</div>
+    </div>
+
+    <div class="rose">
+        <div>
+            <p>There are over three hundred species and tens of thousands of cultivars. The flowers of the rose grow in
+                many different colors, from the well-known red rose or yellow rose and sometimes white or purple rose.
+            </p>
+        </div>
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ99FFB1TJ59sEGDtMUZWh6uYLHh7DCT9BQlg&s"
+                alt="rose-img" />
+        </div>
+    </div>
 </body>
+
 </html>

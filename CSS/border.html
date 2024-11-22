@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        .border_style,.border_radius {
+            height: 300px;
+            border: 1px solid;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #box1,
+        #box2,
+        #box3,
+        #box4,
+        #box5,
+        #box6,
+        #box7,
+        #box8,
+        #box9,
+        #box10,
+        #box11,
+        #box12,
+        #box13,
+        #box14 {
+            width: 215px;
+            height: 215px;
+            border: 15px solid;
+            margin: 20px 0px;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #box1 {
+            border-color: red green blue yellow;
+        }
+
+    
+        #box2 {
+            border-style: dashed;
+        }
+        #box3 {
+            border-style: dotted;
+        }
+
+        #box4 {
+            border-style: groove;
+        }
+
+        #box5 {
+            border-style: ridge;
+        }
+
+        #box6 {
+            border-style: inset;
+        }
+
+        #box7 {
+            border-style: outset;
+        }
+
+        #box8 {
+            border-width: 5px 10px 15px 20px;
+        }
+
+        #box9 {
+            border-top-left-radius: 30px;
+        }
+        
+        #box10 {
+            border-top-right-radius: 30px;
+        }
+        
+        #box11 {
+            border-bottom-right-radius: 30px;
+        }
+        
+        #box12 {
+            border-bottom-left-radius: 30px;
+        }
+        #box13{
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="box1">border-color</div>
+
+    <div class="border_style">
+        <div id="box2">border-style: dashed</div>
+        <div id="box3">border-style: dotted</div>
+        <div id="box4">border-style: groove</div>
+        <div id="box5">border-style:ridge</div>
+        <div id="box6">border-style: inset</div>
+        <div id="box7">border-style: outset</div>
+    </div>
+
+    <div id="box8">border-width: 5 10 15 20</div>
+
+    <div class="border_radius">
+        <div id="box9">border-top-left-radius:30px</div>
+        <div id="box10">border-top-right-radius: 30px</div>
+        <div id="box11">border-bottom-right-radius: 30px</div>
+        <div id="box12">border-bottom-left-radius: 30px</div>
+        <div id="box13">border-radius: 10 20 30 40</div>
+
+    </div>
+</body>
+
+</html>

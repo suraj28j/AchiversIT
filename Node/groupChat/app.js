@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path')
 const fs = require('fs');
+const { userInfo } = require('os');
 
 const app = express();
 
@@ -17,20 +18,6 @@ app.get('/login', (req, res) => {
 })
 app.get('/message', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'message.html'))
-    // res.write(`
-    //     <html>
-    //         <head>
-    //         </head>
-    //         <body>
-    //          <form>
-    //             <label for="user">Message : </label><br>
-    //             <input type="text" id="message" name="message" oninput="handleChange(this)" required><br>
-    //             <button type="submit">Submit</button>
-    //         </form>
-            
-    //         </body>
-    //     </html>
-    //     `)
 })
 
 let dataPath = path.join(path.dirname(process.mainModule.filename), "data", "msg.json");
@@ -47,13 +34,20 @@ const getDataFromFile = (cb) => {
 
 app.post('/message', (req, res) => {
     // console.log(req.body);
-    getDataFromFile((c) => {
+    let data;
+    getDataFromFile((userInfo) => {
         userInfo.push(req.body)
         fs.writeFile(dataPath, JSON.stringify(userInfo), (err) => {
-            console.log(err);
+            if (err) {
+                console.log(err);
+            } else {
+                console.log("userInfo : ", userInfo);
+                // data = userInfo;
+            }
         });
     });
-    res.redirect("/message");
+    // res.json(JSON.parse(data))
+    // res.redirect("/message");
 })
 
 app.listen('3000', () => {

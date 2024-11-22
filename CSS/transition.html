@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition 2</title>
+    <style>
+        h2 {
+            position: absolute;
+            left: 700px;
+            top: 20px;
+        }
+
+        .maindiv {
+            width: 900px;
+            height: 300px;
+            border: 3px dotted;
+            margin: 100px 300px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #box1,
+        #box2,
+        #box3,
+        #box4 {
+            width: 200px;
+            height: 200px;
+            border: 1px solid;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        #box1 {
+            background-color: chocolate;
+            transition: background-color 3s ease;
+        }
+
+        #box2 {
+            background-color: palegoldenrod;
+            transition: border-radius 0.5s ease;
+            transition-delay: 1s;
+        }
+
+        #box3 {
+            background-color: blueviolet;
+            transition: width 2s, height 2s ease;
+            /* transition: height 2s ease; */
+        }
+
+        #box4 {
+            background-color: fuchsia;
+            transition: box-shadow 2s;
+            transition-duration: 5s;
+        }
+
+        #box1:hover {
+            background-color: chartreuse;
+        }
+
+        #box2:hover {
+            border-radius: 50%;
+        }
+
+        #box3:hover {
+            width: 100px;
+            height: 100px;
+        }
+
+        #box4:hover {
+            box-shadow: 8px 8px 10px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Transition</h2>
+    <div class="maindiv">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+    </div>
+
+    <h3>Transition Shorthand Property</h3>
+    <h3>transition:<span style="color: red;">transition-property </span><span
+            style="color:blue;">transition-duritation </span><span
+            style="color:red;">transition-timing-function</span> <span style="color: blue;">transition-delay</span></h3>
+</body>
+
+</html>
