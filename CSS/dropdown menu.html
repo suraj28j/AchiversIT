@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        section>ul {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        section li {
+            border: 1px solid;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            margin: 1px;
+	        /* background-color: lightslategray; */
+        }
+
+        section>ul ul {
+            margin-left: -41px;
+            margin-top: 1px;
+        }
+
+        section a {
+            color: black;
+            display: block;
+        }
+
+        section>ul>li:nth-child(1) ul li:nth-child(1) ul,
+        section>ul>li:nth-child(1) ul li:nth-child(2) ul,
+        section>ul>li:nth-child(1) ul li:nth-child(3) ul,
+        section>ul>li:nth-child(2) ul li:nth-child(1) ul,
+        section>ul>li:nth-child(2) ul li:nth-child(2) ul,
+        section>ul>li:nth-child(2) ul li:nth-child(3) ul,
+        section>ul>li:nth-child(3) ul li:nth-child(1) ul,
+        section>ul>li:nth-child(3) ul li:nth-child(4) ul,
+        section>ul>li:nth-child(3) ul li:nth-child(5) ul,
+        section>ul>li:nth-child(3) ul li:nth-child(6) ul {
+            margin: -52px 60px;
+        }
+
+        section>ul ul,
+        section>ul ul ul {
+            display: none;
+        }
+
+        section>ul>li:hover>ul,
+        section>ul li ul li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li><a href="#">HTML</a>
+                <ul>
+                    <li><a href="#">Tags</a>
+                        <ul>
+                            <li><a href="#">Sementic</a></li>
+                            <li><a href="#">Non-sementic</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Elements</a>
+                        <ul>
+                            <li><a href="#">Inline</a></li>
+                            <li><a href="#">Block</a></li>
+                            <li><a href="#">Inline-Block</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Attributs</a>
+                        <ul>
+                            <li><a href="#">Predefine</a></li>
+                            <li><a href="#">User Define</a></li>
+                            <li><a href="#">Mandatary</a></li>
+                            <li><a href="#">Optimal</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">CSS</a>
+                <ul>
+                    <li><a href="#">Properties</a>
+                        <ul>
+                            <li><a href="#">Box Model</a></li>
+                            <li><a href="#">Background</a></li>
+                            <li><a href="#">Flex Box</a></li>
+                            <li><a href="#">Grid System</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Selectors</a>
+                        <ul>
+                            <li><a href="#">Globle</a></li>
+                            <li><a href="#">Element</a></li>
+                            <li><a href="#">Class</a></li>
+                            <li><a href="#">Id</a></li>
+                            <li><a href="#">Attribute</a></li>
+                            <li><a href="#">Relationship</a></li>
+                            <li><a href="#">Psuedo</a></li>
+                            <li><a href="#">Group</a></li>
+                            <li><a href="#">Combinator</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Apply CSS</a>
+                        <ul>
+                            <li><a href="#">Inline</a></li>
+                            <li><a href="#">Internal</a></li>
+                            <li><a href="#">External</a></li>
+                            <li><a href="#">Import</a></li>
+                            <li><a href="#">Framworks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">JavaScript</a>
+                <ul>
+                    <li><a href="#">Datatype</a>
+                        <ul>
+                            <li><a href="#">Primitive</a></li>
+                            <li><a href="#">Non-primitive</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Keywords</a></li>
+                    <li><a href="#">Indentifiers</a></li>
+                    <li><a href="#">Opretors</a>
+                        <ul>
+                            <li><a href="#">Assignment</a></li>
+                            <li><a href="#">Comparison</a></li>
+                            <li><a href="#">Arithmetic</a></li>
+                            <li><a href="#">Logical</a></li>
+                            <li><a href="#">Bitwise</a></li>
+                            <li><a href="#">BigInt</a></li>
+                            <li><a href="#">String</a></li>
+                            <li><a href="#">Conditional</a></li>
+                            <li><a href="#">Comma</a></li>
+                            <li><a href="#">Unary</a></li>
+                            <li><a href="#">Relational</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Condition</a>
+                        <ul>
+                            <li><a href="#">if</a></li>
+                            <li><a href="#">else</a></li>
+                            <li><a href="#">if else</a></li>
+                            <li><a href="#">switch</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">loop</a>
+                        <ul>
+                            <li><a href="#">For</a></li>
+                            <li><a href="#">While</a></li>
+                            <li><a href="#">do While</a></li>
+                            <li><a href="#">for Each</a></li>
+                            <li><a href="#">for in</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Function</a></li>
+                    <li><a href="#">OOPs</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
