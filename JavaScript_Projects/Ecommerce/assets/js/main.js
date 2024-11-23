@@ -152,6 +152,7 @@ function addToCart(id) {
         getItem.quantity = 1;
         prvData.push(getItem)
     }
+    alert(`${getItem.title} add successfully`);
     sessionStorage.setItem("products", JSON.stringify(prvData));
 }
 
@@ -162,7 +163,7 @@ function setDeatils(id) {
     })
     console.log(product);
     sessionStorage.setItem("product", JSON.stringify(product));
-    window.location.href = './assets/html/product.html'
+    window.location.href = './assets/html/singleProduct.html'
 }
 
 

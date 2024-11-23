@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background-Origin</title>
+    <style>
+        #box1{
+            width: 400px;
+            height: 300px;
+            margin: 50px 0px;
+            padding: 40px;
+            border: 40px dotted red;
+            background-image: url("./nature.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            background-origin:border-box; 
+        }
+        #box2{
+            width: 400px;
+            height: 300px;
+            margin: 50px 0px;
+            padding: 40px;
+            border: 40px dotted red;
+            background-image: url("./nature.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin:padding-box; /* Default Value */
+        }
+        #box3{
+            width: 400px;
+            height: 300px;
+            margin: 50px 0px;
+            padding: 40px;
+            border: 40px dotted red;
+            background-image: url("./nature.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-origin:content-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <h2>background-origin:border-box</h2>
+        <p>The background-clip CSS property sets whether an element's background extends underneath its border box,
+            padding box, or content box.</p>
+        <p>If the element has no background-image or background-color, this property will only have a visual effect when
+            the border has transparent regions or partially opaque regions (due to border-style or border-image);
+            otherwise, the border masks the difference.</p>
+    </div>
+
+    <div id="box2">
+        <h2>background-origin:padding-box</h2>
+        <p>The background-clip CSS property sets whether an element's background extends underneath its border box,
+            padding box, or content box.</p>
+        <p>If the element has no background-image or background-color, this property will only have a visual effect when
+            the border has transparent regions or partially opaque regions (due to border-style or border-image);
+            otherwise, the border masks the difference.</p>
+    </div>
+
+    <div id="box3">
+        <h2>background-origin:content-box</h2>
+        <p>The background-clip CSS property sets whether an element's background extends underneath its border box,
+            padding box, or content box.</p>
+        <p>If the element has no background-image or background-color, this property will only have a visual effect when
+            the border has transparent regions or partially opaque regions (due to border-style or border-image);
+            otherwise, the border masks the difference.</p>
+    </div>
+</body>
+
+</html>
+
+<!--Note : background-color start with border-box but background-image start with padding-box -->

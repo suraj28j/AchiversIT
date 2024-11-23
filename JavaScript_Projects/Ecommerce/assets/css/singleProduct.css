@@ -1,0 +1,9 @@
+.col-md-4 img {
+    width: 15rem;
+    height: 15rem;
+}
+marquee{
+    justify-content: center;
+    background-color:antiquewhite ;
+    box-shadow: 2px 2px 3px rgb(235, 222, 205);
+}
