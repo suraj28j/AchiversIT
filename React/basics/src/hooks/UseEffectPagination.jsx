@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { key } from './key'
+import { key } from './key.js'
 
 
 const UseEffectPagination = () => {
@@ -11,7 +11,7 @@ const UseEffectPagination = () => {
     },[page]);
 
     let getData = async () => {
-        let data = await fetch(`https://dummyapi.io/data/v1/user?page=${page}&limit=10`,
+        let data = await fetch(`https://dummyapi.io/data/v1/user?page=${page}&limit=${page}`,
             {
                 method: 'GET',
                 headers: {

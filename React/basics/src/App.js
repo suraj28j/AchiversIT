@@ -15,10 +15,18 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 import Header from './Header';
 import Routing from './Routing';
+import { useState } from 'react';
 
 // import CompA from './hooks/useContext/CompA';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleBackgroundColor = () => {
+    setIsDarkMode(!isDarkMode);
+  }
+
+  const backgroundClass = isDarkMode ? "bg-dark text-light" : "bg-light text-dark";
 
   // let user = {
   //   fname:"Suraj",
@@ -30,7 +38,7 @@ function App() {
   // let nums = [2,5,7,10]
 
   return (
-    <div>
+    <div className={backgroundClass} style={{ minHeight: "100vh" }}>
 
       {/* <Suraj/>
       <Style/>
@@ -44,11 +52,11 @@ function App() {
       {/* <MountingPhaseComp/> */}
       {/* <UpdatingPhase/> */}
 
-      <Header/>
-      <Routing/>
-      
+      <Header isDarkMode={isDarkMode} toggleBackgroundColor = {toggleBackgroundColor}/>
+      <Routing />
+
       {/* <CompA name="React JS"/> */}
-      
+
     </div>
   );
 }

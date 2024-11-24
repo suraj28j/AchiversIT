@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #div-absolute1{
+            border:  2px solid;
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            right: 50px;
+            top: 50px;
+            text-align: center;
+            line-height: 100px;
+            background:linear-gradient(green,yellow)
+        }
+        .div-relative{
+            border: 2px solid;
+            width:400px;
+            height:200px;
+            position: relative;
+            background: linear-gradient(red,white);
+        }
+        .div-relative h2{
+            position: absolute;
+            top: 10px;
+            left: 50px;
+        }
+        #div-absolute2{
+            border: 2px solid;
+            width: 200px;
+            height:100px;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            background: linear-gradient(yellow,green);
+        }
+        #footer-h2{
+            margin-top: 1200px;
+            border: 5px solid;
+        }
+        #div-fixed{
+            border: 2px solid;
+            width: 200px;
+            height: 50px;
+            position: fixed;
+            text-align: center;
+            line-height:50px;
+            background:linear-gradient(orange,white,green)
+        }
+        #sticky{
+            border: 2px solid;
+            margin-top: 100px;
+            padding: 10px;
+            position: sticky;
+            top: 0px;
+            background: linear-gradient(skyblue,lightgreen);
+        }
+    </style>
+</head>
+<body>
+    <div id="div-absolute1"><h2>Position:absolute</h2></div>
+    
+    <div class="div-relative">
+        <h2>Position:relative (Parent)</h2>
+        <div id="div-absolute2">
+            <h3>Position:absolute (Child)</h3>
+        </div>
+    </div>
+    <div id="div-fixed">
+        <h3>Position:Fixed</h3>
+    </div>
+    <h2 id="sticky">Position:Sticky</h2>
+    <h2 id="footer-h2">Footer</h2>
+    
+</body>
+</html>
