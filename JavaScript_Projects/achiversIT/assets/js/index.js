@@ -11,3 +11,38 @@ function listShow() {
         count = false
     }
 }
+
+
+// Slider
+let flag = 0;
+
+function slideshow(num) {
+    // console.log(num);
+    let slides = document.querySelectorAll(".slide");
+
+    if (num == slides.length) {
+        num = 0;
+        flag = 0
+    } 
+    
+    for (let slide of slides) {
+        slide.style.display = "none";
+    }
+    slides[num].style.display = "block";
+}
+
+let next = document.querySelector(".next");
+let prev = document.querySelector(".prev");
+
+
+next.addEventListener('click', () => {
+    flag++;
+    slideshow(flag)
+})
+prev.addEventListener('click', () => {
+    if (flag > 0) {
+        flag--;
+    }
+    slideshow(flag);
+})
+slideshow(flag)

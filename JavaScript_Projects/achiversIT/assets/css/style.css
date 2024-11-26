@@ -43,13 +43,29 @@ header img {
     height: 100%;
 }
 
-/* banner */
-.banner {
-    height: 400px;
+ 
+/* slider */
+.slide-container {
+    position: relative;
 }
-.banner img {
+.slide {
+    display: none;
+}
+.slide img {
     width: 100%;
-    height: 100%;
+}
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    color: white;
+    font-size: 2rem;
+}
+.next {
+    right: 20px;
+}
+.prev {
+    left: 20px;
 }
 
 /* vertical fixed (Contact us) */
@@ -139,7 +155,6 @@ h2{
 .tranding .over{
     position: absolute;
     top:0;left:0;right:0;bottom:0;
-    
     opacity: 0;
     background-color: black;
     transition:opacity 0.5s linear ;
@@ -160,9 +175,23 @@ h2{
    justify-content: center;
    margin-top: 5px;
 }
-.tranding .content button{
-    padding: 10px;
+.tranding .btn p{
+    cursor: pointer;
+    border: 1px solid var(--font-color1);
+    font: var(--font-color1);
+    margin-bottom: 5px;
+    padding: 5px 8px;
 }
-.tranding section:first-child:hover .over{
+
+.tranding .btn p:hover{
+    border: 1px solid var(--bg-color5);
+    background-color: var(--bg-color5);
+    font: var(--font-color1);
+}
+.tranding section:hover .over{
     opacity: 0.9;
+}
+
+.content{
+    font-size: 0.9rem;
 }
