@@ -1,6 +1,5 @@
 # AchiversIT
 
-## Java Script Practices
 
 ## Java Script Projects
 
@@ -10,17 +9,17 @@
 - Bank Statement
 - Simple Calculator
 - Weather API
-- Ecommerce Site (API)
+- [Portfolio](https://suraj28j.github.io/Portfolio/)
+- [Ecommerce website using API](https://suraj28j.github.io/Ecommerce-Website-using-API/)
 
 ## React Projects
 
 - Basics
-- Ecommecre (API)
-- Mart Ecommerce
-- Blog Client
+- Ecommerce website using API
+- [Mart Ecommerce](https://ecommerce-self-gamma-14.vercel.app/)
 
 ## Node JS
 
 - Group Chat
-- Blog Server
+- [Blog](https://blogclient-alpha.vercel.app/)
 
