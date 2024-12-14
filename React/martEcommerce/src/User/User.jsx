@@ -14,12 +14,12 @@ const User = () => {
         <div className='row mt-4 mb-4 d-flex justify-content-center'>
           <h3>USER LOGIN</h3>
           <form className='w-75'>
-          <div class="input-group mt-4">
-            <span class="input-group-text" id="basic-addon1"><i class="bi bi-person-fill"></i></span>
+          <div className="input-group mt-4">
+            <span className="input-group-text" id="basic-addon1"><i className="bi bi-person-fill"></i></span>
             <input type='text' className='form-control' aria-label="Username" aria-describedby="basic-addon1"/>
           </div>
-          <div class="input-group mt-4">
-            <span class="input-group-text" id="basic-addon1"><i class="bi bi-lock-fill"></i></span>
+          <div className="input-group mt-4">
+            <span className="input-group-text" id="basic-addon1"><i className="bi bi-lock-fill"></i></span>
             <input type='text' className='form-control' aria-label="Password" aria-describedby="basic-addon1"/>
           </div>
           </form>

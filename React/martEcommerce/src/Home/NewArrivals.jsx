@@ -26,7 +26,7 @@ const NewArrivals = () => {
           <div className='row g-2 d-flex justify-content-center'>
             {
               newArrivals.map((item) => (
-                <div className='col-md-4'>
+                <div className='col-md-4' key={item.id}>
                   <div className='card' style={{ height: '100%' }}>
                     <div className='card-body'>
                       <Link to={`/product/${item.id}`}>
@@ -39,11 +39,11 @@ const NewArrivals = () => {
                       </div>
                       <div className='card-subtitle'>
                         <span className='d-flex mt-4 mb-4'>
-                          <i class="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
-                          <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                          <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
+                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                         </span>
                       </div>
                       <div className='d-flex justify-content-between'>

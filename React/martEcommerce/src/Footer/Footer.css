@@ -1,0 +1,13 @@
+footer{
+    margin-top: auto;
+    background-color: #0f3460;
+    color: white;
+    padding: 2rem 0 1rem 0;
+}
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+footer ul li{
+    padding: 2px 0;
+}

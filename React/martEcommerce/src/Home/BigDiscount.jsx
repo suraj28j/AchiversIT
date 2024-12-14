@@ -21,11 +21,11 @@ const BigDiscount = () => {
                         <div className='row g-2'>
                         {
                         discoutProducts.map((items) => (
-                            <div className='col-md-4 '>
+                            <div className='col-md-4 ' key={items.id}>
                                 <div className='card h-100'>
                                     <div className='d-flex justify-content-between ms-2 me-2 mt-2'>
                                         <span className='p-2' style={{ backgroundColor: '#0f3460', color: 'white', borderRadius: '5px' }}>{items.discount}% off</span>
-                                        <i class="bi bi-heart-fill"></i>
+                                        <i className="bi bi-heart-fill"></i>
                                     </div>
                                     <div className='card-body'>
                                         <Link to={`/product/${items.id}`}>
@@ -35,13 +35,13 @@ const BigDiscount = () => {
                                         </Link>
                                     </div>
                                     <div className='card-title ms-4 me-4'>
-                                        <h6 class="card-title">{items.productName}</h6>
+                                        <h6 className="card-title">{items.productName}</h6>
                                         <span className='d-flex mt-4 mb-4'>
-                                            <i class="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
-                                            <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                                            <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                                            <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                                            <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                                            <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
+                                            <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                                            <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                                            <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                                            <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                                         </span>
                                     </div>
                                     <div className='d-flex justify-content-between ms-4 me-4 mb-4'>

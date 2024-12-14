@@ -1,0 +1,12 @@
+.cart_section .increment_button {
+    padding: 1px 8px 3px;
+    border: 1px solid #0f3460;
+    color: #0f3460;
+}
+
+.cart_section .decrement_button {
+    padding: 1px 10px 3px;
+    border: 1px solid #0f3460;
+    color: #0f3460;
+}
+
