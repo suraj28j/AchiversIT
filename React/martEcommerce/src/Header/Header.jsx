@@ -34,7 +34,7 @@ const Header = () => {
                             <li className="navbar-item">
                                 <Link className='nav-link'>
                                     <i className="bi bi-cart-fill"></i>
-                                    <span className="p-1 rounded-circle position-absolute translate-middle text-center"
+                                    <span className="p-1 rounded-circle position-absolute translate-middle text-center itemsNotify"
                                         style={{ width: '25px', height: '25px', lineHeight: '18px' }}
                                     >{cart_data_Length}</span>
                                 </Link>
