@@ -26,7 +26,7 @@ const NewArrivals = () => {
           <div className='row g-2 d-flex justify-content-center'>
             {
               newArrivals.map((item) => (
-                <div className='col-md-4' key={item.id}>
+                <div className='col-sm-6 col-lg-3 col-xl-4' key={item.id}>
                   <div className='card' style={{ height: '100%' }}>
                     <div className='card-body'>
                       <Link to={`/product/${item.id}`}>

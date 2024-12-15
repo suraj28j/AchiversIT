@@ -13,7 +13,7 @@ const Footer = () => {
                     </div>
 
                     <div className='col-md-3'>
-                        <h5 className='ms-4 ms-md-0'>About Us</h5>
+                        <h5>About Us</h5>
                         <ul>
                             <li>Carrers</li>
                             <li>Our Store</li>

@@ -4,10 +4,10 @@ import { serviceData } from '../Images/products'
 const Service = () => {
   return (
     <div className='container mt-4 mb-4'>
-      <div className='row'>
+      <div className='row g-2'>
         {
           serviceData.map((items) => (
-            <div className='col-md-3 mb-3' key={items.bg}>
+            <div className='col-sm-6 col-lg-4 col-xl-3 mb-3' key={items.bg}>
               <div className="card text-center" style={{ backgroundColor: items.bg }} key={items.id}>
                 <div className="card-body">
                   <span className='bg-light p-2 rounded-circle text-center'>{items.icon}</span>

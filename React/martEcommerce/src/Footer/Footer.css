@@ -1,13 +1,15 @@
-footer{
-    margin-top: auto;
+footer {
     background-color: #0f3460;
     color: white;
-    padding: 2rem 0 1rem 0;
+    margin-top: auto;
+    /* padding: 2rem 0 1rem 0; */
 }
-footer ul{
+
+footer ul {
     list-style: none;
-    padding: 0;
+    padding: 0px;
 }
-footer ul li{
-    padding: 2px 0;
+
+footer ul li {
+    padding: 2px 0px;
 }
