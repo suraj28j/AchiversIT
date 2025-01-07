@@ -13,3 +13,25 @@ footer ul {
 footer ul li {
     padding: 2px 0px;
 }
+
+/* Scroll to Top */
+.scroll_top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+    cursor: pointer;
+    width: 2.7rem;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    text-align: center;
+    background-color: #0f3460;
+    border-radius: 10%;
+    border: 2px solid white;
+}
+
+.scroll_top i {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+}
