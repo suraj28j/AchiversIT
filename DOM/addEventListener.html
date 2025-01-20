@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        #circle{
+            width: 50px;
+            height: 50px;
+            border: 1px solid;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        let container = document.querySelector("#container");
+        container.addEventListener('click',(e)=>{
+
+            // console.log(e.x,e.y); // is specified in the W3C working drafts, but not supported in many browsers
+            // console.log(e.clientX,e.clientY);
+            // console.log(e.screenX,e.screenY);
+            
+            // console.log(e.timeStamp/1000);
+
+            // console.log(e.type);
+
+            // console.log(e.target);
+            // console.log(e.srcElement); // srcElement is a IE non-standard way to obtain the target.
+            // console.log(e.toElement);
+            // console.log(e.currentTarget);
+
+            console.log("ctrlKey ",e.ctrlKey);
+            console.log("altKey ",e.altKey);
+            console.log("shiftKey ",e.shiftKey);
+            console.log(e.keyCode);
+            
+            
+            
+            container.innerHTML = '';
+            let circle = document.createElement("span");
+            circle.setAttribute('id','circle');
+            circle.style.left = e.x-25+'px';
+            circle.style.top = e.y-25+'px';
+            container.appendChild(circle)
+        })
+    </script>
+</body>
+</html>
