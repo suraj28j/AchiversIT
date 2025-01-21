@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Div</title>
+    <style>
+        #parent {
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+
+        #child {
+            width: 100px;
+            height: 100px;
+            border: 1px solid;
+        }
+
+        /* Method [1] */
+        /* #parent{
+            display: grid;
+        }
+        #child{
+            place-self: center;
+        } */
+
+        /* ---------------------- */
+
+        /* Method [2] */
+        /* #parent{
+            display: grid;
+            place-items: center;
+        } */
+
+        /* ---------------------- */
+
+        /* Method [3] */
+        /* #parent{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+
+        /* ---------------------- */
+
+        /* Method [4] */
+        /* #parent{
+           position: relative;
+        }
+        #child{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        } */
+
+        /* ---------------------- */
+
+        /* Method [5] */
+        #parent{
+           align-content: center;
+        }
+        #child{
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+
+</html>
