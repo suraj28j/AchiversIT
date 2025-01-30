@@ -1,0 +1,50 @@
+/* Navigaion */
+
+.main_nevigation{
+    margin-top: -10%;
+}
+.main_nevigation ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.main_nevigation ul ul{
+    display: flex;
+    flex-direction: column;
+    display: none;
+    margin: 2px 0px;
+}
+.main_nevigation ul ul li{
+    margin: 1px 0px;
+}
+.main_nevigation nav{
+    margin:0% 10%;
+}
+.main_nevigation li{
+    width: 115px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 5%;
+}
+.main_nevigation li:hover ul{
+    display: block;
+}
+.main_nevigation a{
+    color: var(--text-color1);
+    display: block;
+}
+.main_nevigation nav>ul>li:nth-child(3) input{
+    width: 100%;
+    height:100%;
+}
+.main_nevigation nav>ul>li:nth-child(3){
+    width: 50%;
+}
+.main_nevigation ul ul li{
+    background-color:gray;
+    border: 1px solid;
+    opacity: 0.8;
+}
+.main_nevigation ul>li:nth-child(2),.main_nevigation ul>li:nth-child(4){
+    background-color:gray;
+}

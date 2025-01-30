@@ -1,0 +1,360 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: roboto;
+}
+
+:root {
+    --bg-color1: black;
+    --bg-color2: #2d2b29;
+    --bg-color3: red;
+    --bg-color4:#FA6626;
+    --text-color1: white;
+    --text-color2: red;
+    --text-color3:black;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/roboto/Roboto-Regular.ttf);
+}
+
+body {
+    background-image: url(../images/banner-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/* Header Styling */
+header {
+    margin: 0% 10%;
+    border: 1px solid;
+    background-color: var(--bg-color2);
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
+}
+header ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-evenly;
+}
+header nav {
+    margin: 2% 5%;
+}
+header a {
+    color: var(--text-color1);
+    font-size: 120%;
+}
+header a:hover {
+    color: var(--text-color2);
+}
+
+/* Logo Styling */
+.logo {
+    display: grid;
+    justify-content: center;
+}
+
+.logo img {
+    width: 70%;
+    height: 55%;
+}
+
+/* H1 Heading Styling*/
+.heading{
+    margin-top: 5%;
+    text-align: center;
+    
+}
+.heading h1{
+    font-size: 400%;
+    color: var(--text-color1);
+}
+
+/* Button Styling */
+.button{
+    display: grid;
+    justify-content: center;
+    margin-top: 5%;
+}
+.button button{
+    width:100px;
+    height: 50px;
+    border-radius: 5%;
+    background-color: var(--bg-color2);
+}
+button a{
+    text-decoration: none;
+    color: var(--text-color1);
+    font-size: 120%;
+}
+button:hover{
+    background-color:var(--bg-color4);
+}
+
+/* Items Heading */
+.item_heading{
+    margin-top: 5%;
+    font-size:200%;
+    text-align: center;
+    color: var(--bg-color2);
+}
+/* Items */
+.fashion,.electronic,.jewellery{
+    display:grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5%;
+}
+.fashion section,.electronic section,.jewellery section{
+    width:400px;
+    height: 500px;
+    border: 2px solid rgba(255, 200, 100, 0.2);
+    box-shadow: 2px 2px 40px antiquewhite;
+}
+.fashion section p,h4{
+    padding: 2%;
+}
+.electronic section p,h4{
+    padding: 2%;
+}
+.jewellery section p,h4{
+    padding: 2%;
+}
+.fashion p:nth-child(4),.electronic p:nth-child(4),.jewellery p:nth-child(4){
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-between;
+}
+.electronic p:nth-child(4){
+    margin-top: 17%;
+}
+.fashion span,.electronic span,.jewellery span{
+    color: #FA6626;
+}
+
+/* Items Image Correction */
+
+/* Fashion */
+.fashion section:nth-child(1) img{
+    margin-top: 5%;
+    /* filter: blur(6px); */
+    
+}
+.fashion section:nth-child(2) img{
+    margin-top: 6%;
+    /* filter: blur(10px); */
+    /* filter: drop-shadow(1px 1px 20px gray); */
+}
+.fashion section:nth-child(3) img{
+    margin-top: 8%;
+}
+/* Elecrronics */
+.electronic section:nth-child(1) img{
+    margin-top: 6%;
+}
+.electronic section:nth-child(2) img{
+    margin-top: 6%;
+}
+.electronic section:nth-child(3) img{
+    margin-top: 6%;
+}
+/* Jewellery */
+.jewellery section:nth-child(1) img{
+    margin-top: 17%;
+}
+.jewellery section:nth-child(2) img{
+    margin-top: 12%;
+}
+.jewellery section:nth-child(3) img{
+    margin-top: 12%;
+}
+
+/* Circle */
+.circle{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+.circle section{
+    width: 100px;
+    height: 100px;
+    border: 20px solid;
+    border-radius: 50%;
+    border-color: var(--bg-color3) var(--bg-color2);
+    animation-name: circle;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes circle {
+    to{
+        transform: rotate(360deg);
+    }
+    from{
+        transform: rotate(0);
+    }
+}
+
+/* Footer Styling */
+footer{
+    margin-top: 5%;
+    background-color:var(--bg-color1);
+    text-align: center;
+    border: 1px solid;
+}
+footer section{
+    margin: 0% 25%;
+}
+footer nav{
+    display: flex;
+    justify-content: space-between;
+}
+footer ul{
+    display: flex;
+    justify-content: space-around;
+}
+footer p,footer li{
+    color:var(--text-color1);
+    padding: 3%;
+}
+footer a{
+    text-decoration: none;
+    color: var(--text-color1);
+}
+footer nav p:nth-child(2) a{
+    color: var(--text-color2);
+}
+
+
+
+/* Media Section  */
+@media screen and (max-width:1024px) {
+    header a {
+        font-size: 90%;
+    }
+    .main_nevigation ul>li{
+        width: 115px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 80%;
+        margin: 2px;
+    }
+    .fashion section,.electronic section,.jewellery section{
+        width:300px;
+        height:400px;
+    }
+    .fashion img{
+        width: 70%;
+        height: 70%;
+    }
+    .electronic img{
+        width: 70%;
+        height: 58%;
+    }
+    .jewellery img{
+        width: 70%;
+        height: 63%;
+    }
+    .jewellery section:nth-child(1) img{
+        margin-top: 12%;
+    }
+    footer section{
+        margin: 0% 10%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    header a {
+        font-size: 65%;
+    }
+    .heading h1{
+        font-size: 250%;
+        color:var(--bg-color2);
+    }
+    .main_nevigation ul>li{
+        width: 115px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 60%;
+        margin: 2px;
+    }
+    .item_heading{
+        font-size:160%;
+    }
+    .fashion section,.electronic section,.jewellery section{
+        width:220px;
+        height:400px;
+    }
+    .fashion img{
+        width: 70%;
+        height: 73%;
+    }
+    .electronic img{
+        width: 70%;
+        height: 65%;
+    }
+    .jewellery img{
+        width: 70%;
+        height: 70%;
+    }
+    .jewellery section:nth-child(1) img{
+        margin-top: 11%;
+    }
+    footer section{
+        margin: 0% 5%;
+    }
+}
+
+@media screen and (max-width:426px) {
+    header {
+        display: none;
+    }
+    .main_nevigation ul>li:nth-child(2),.main_nevigation ul>li:nth-child(3),.main_nevigation ul>li:nth-child(4){
+        display: none;
+    }
+    .main_nevigation ul>li:nth-child(1){
+        width: 25%;
+        height: 25%;
+        background-color:gray;
+    }
+    .main_nevigation ul>li:nth-child(5){
+        background-color:gray;
+    }
+    .main_nevigation ul>li:nth-child(6){
+        background-color:gray;
+    }
+    .heading h1{
+        font-size: 200%;
+        color: var(--text-color3);
+    }
+    .item_heading{
+        font-size:140%;
+    }
+    .fashion,.electronic,.jewellery{
+        display:flex;
+        flex-direction: column;
+    }
+    .fashion section,.electronic section,.jewellery section{
+        width:300px;
+        height:500px;
+        margin: 5% 15%;
+    }
+    .fashion img{
+        width: 70%;
+        height: 75%;
+    }
+    .electronic img{
+        width: 70%;
+        height: 65%;
+    }
+    .jewellery img{
+        width: 70%;
+        height: 70%;
+    }
+    footer ul{
+        flex-direction: column;
+    }
+}
