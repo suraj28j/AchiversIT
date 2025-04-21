@@ -25,8 +25,7 @@ const products = [
     }
 ]
 
-let product = []; // product added in cart
-
+const cartdata = [];
 
 function displayAllItem() {
     let allItem = document.getElementById("allItem");
@@ -36,7 +35,7 @@ function displayAllItem() {
         <img src = '${item.imgUrl}'  alt="casual">
         <h2>${item.productName}</h2>
         <h3>₹ ${item.price}</h3>
-        <button onclick="addToCart('${item.imgUrl}','${item.productName}',${item.price})">Add to cart</button>
+        <button onclick="addToCart(${item.id})">Add to cart</button>
         `
         allItem.appendChild(div)
     })
@@ -49,7 +48,7 @@ function displayCartItem() {
     let price = document.getElementById('price');
 
     selected_item.innerHTML = ''
-    product.forEach((item, index) => {
+    cartdata.forEach((item, index) => {
         let div = document.createElement('div');
         div.setAttribute('id', 'box');
         div.innerHTML = `
@@ -60,18 +59,19 @@ function displayCartItem() {
             `
         selected_item.appendChild(div);
     })
-    count_items.innerText = product.length;
-    price.innerText = product.reduce((acc, curr) => (acc + curr.price), 0)
+    count_items.innerText = cartdata.length;
+    price.innerText = cartdata.reduce((acc, curr) => (acc + curr.price), 0)
 }
 
-function addToCart(imgUrl, productName, price) {
-    let data = { imgUrl, productName, price }
-    product.push(data)
-    console.log(product);
+function addToCart(id) {
+    const addProduct = products.find((product) => {
+        return product.id === id
+    })
+    cartdata.push(addProduct)
     displayCartItem();
 }
 
 function deleteToCart(index) {
-    product.splice(index, 1)
+    cartdata.splice(index, 1)
     displayCartItem();
 }
