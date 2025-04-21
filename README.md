@@ -1,10 +1,10 @@
 # AchiversIT
 
 
-## Java Script Projects
+## JavaScript Projects
 
-- Add to Cart
-- Sticky Note
+- [Add to Cart](https://addtocart-t.netlify.app/)
+- [Sticky Note](https://sticky-nt.netlify.app/)
 - [Library Management System](https://aquamarine-ganache-5328a0.netlify.app)
 - [Bank Statement](https://bank-stmt.netlify.app/)
 - Simple Calculator
