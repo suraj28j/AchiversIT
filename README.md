@@ -6,7 +6,7 @@
 - Add to Cart
 - Sticky Note
 - [Library Management System](https://aquamarine-ganache-5328a0.netlify.app)
-- Bank Statement
+- [Bank Statement](https://bank-stmt.netlify.app/)
 - Simple Calculator
 - Weather API
 - [Portfolio](https://suraj28j.github.io/Portfolio/)
