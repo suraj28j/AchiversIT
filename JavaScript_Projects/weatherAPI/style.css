@@ -24,6 +24,7 @@
     outline: none;
     border: none;
     border-radius: 50%;
+    cursor: pointer;
 }
 .weather_body{
     display: flex;

@@ -4,7 +4,8 @@ const initState = {
 }
 
 export const productReducer = (state = initState, action) => {
-    // console.log(action);        
+    // console.log(action);    
+    
     switch (action.type) {
         case 'ADD_TO_CART':
             let findItem = state.cartData.find((item) => {
