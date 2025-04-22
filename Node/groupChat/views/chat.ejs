@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Group Chat</h1>
+        <form action="/chat" method="post">
+            <input type="hidden" id="input_username" name="username">
+            <label for="message">Message : </label>
+            <input id="message" name="message">
+            <button>Submit</button>
+        </form>
+
+        <div class="chatBox">
+            <% chats.forEach((chat)=>{ %>
+                <h3>
+                    <%= chat.username %> : <%= chat.message %>
+                </h3>
+                <% }) %>
+        </div>
+    </div>
+
+    <script>
+        const username = localStorage.getItem('username');
+        document.querySelector("#input_username").value = username;
+    </script>
+</body>
+
+</html>
