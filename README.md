@@ -16,7 +16,7 @@
 
 - Basics
 - Ecommerce website using API
-- [Mart Ecommerce](https://ecommerce-self-gamma-14.vercel.app/)
+- [Mart Ecommerce](https://mart-ecom-beryl.vercel.app/)
 
 ## Node JS
 
